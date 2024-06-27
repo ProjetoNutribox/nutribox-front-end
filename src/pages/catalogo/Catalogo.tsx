@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/home.png'
+import './catalogo.css'
 
 function Catalogo() {
   return (
@@ -7,8 +7,7 @@ function Catalogo() {
     <header>
         <div className='flex '>
             <h1>Catalogo</h1>
-            <div className='flex justify-center'>
-            <img className='w-2/3' src={logo} alt="" />
+            <div className='flex justify-center fundoCatalogo' >
 
             </div>
             

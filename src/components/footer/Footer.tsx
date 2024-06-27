@@ -7,7 +7,7 @@ function Footer() {
 
   return (
     <>
-        <div className="flex justify-center bg-indigo-900 text-white">
+        <div className="flex justify-center bg-lime-400 text-white">
           <div className="container flex flex-col items-center py-4">
             <p className='text-xl font-bold'> Nutrindo vidas | Copyright: Nutribox 2024</p>
             <p className='text-lg'>Entre em contato </p>
