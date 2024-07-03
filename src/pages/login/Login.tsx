@@ -6,6 +6,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContexts';
 import UsuarioLogin from '../../models/UsuarioLogin';
 import { RotatingLines } from 'react-loader-spinner';
+import { cadastrar } from '../../services/Service';
+import imageLogin from '../../assets/imageLogin.png'
+
 
 function Login() {
   const navigate = useNavigate();
@@ -40,34 +43,50 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 }
 return (
   <>
-    <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
-      <form className="flex justify-center items-center flex-col w-1/2 gap-4 form" onSubmit={login}>
-        <h2 className="   text-5xl ">Entrar</h2>
-        <div className="flex flex-col w-full">
-          <label htmlFor="email" className='text-white '>Email</label>
+    <div className="   place-items-center font-bold  body flex flex-col">
+
+    
+
+<div className='grid  grid-cols-2 gap-2 '>
+
+<div className=' object-scale-down px-20' >
+<img src={imageLogin} alt="" />
+</div>
+
+      <form className="flex justify-center items-center flex-col  gap-10 form mb-36 px-16 " onSubmit={login}>
+
+      <div className='flex  gap-10'>
+
+<h2 className="   text-5xl   font-light login-titulo">Login</h2>
+<span className='text-4xl font-light login-titulo'>|</span>
+<h2 className="   text-5xl font-light login-titulo ">Cadastrar</h2>
+</div>
+    
+        <div className="flex flex-col w-full ">
+          <label htmlFor="email" className='text-[#16171B] pb-4 '>Email</label>
           <input
             type="text"
             id="email"
             name="email"
             placeholder="Email"
-            className="border-2 border-t-white rounded p-2"
+            className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
             value={usuarioLogin.email} 
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
           </div>
             <div className="flex flex-col w-full">
-              <label htmlFor="senha" className='text-white '>Senha</label>
+              <label htmlFor="senha" className='text-[#16171B] pb-4 '>Senha</label>
               <input
                 type="password"
                 id="senha"
                 name="senha"
                 placeholder="Senha"
-                className="border-2 border-white rounded p-2"
+                className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
                 value={usuarioLogin.senha} 
                 onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
               />
               </div>
-            <button  type='submit' className="rounded color-button hover:bg-lime-700 bg-lime-900 w-1/2 py-2 flex justify-center">
+            <button  type='submit' className="rounded-xl color-button   bg-[#FB7F01]  w-1/4 py-4 flex justify-center font-normal text-xl text-[#FFFFFF]">
              {isLoading ? <RotatingLines
               strokeColor="white"
               strokeWidth="5"//icone de carregamento
@@ -75,21 +94,22 @@ return (
               width="24"
               visible={true}
             /> :
-              <span>Entrar</span>}
+              <span >Entrar</span>}
             </button>
   
             <hr className="border-slate-800 w-full" />
   
-            <p>
+            <p className='text-[#16171B] font-medium'>
               Ainda não tem uma conta?{' '}
-              <Link to="/cadastro" className=" hover:underline">
+              <Link to="/cadastro" className=" hover:text-[#023e8a]  underline">
                 Cadastre-se
               </Link>
             </p>
           </form>
           
-          <div className="fundoLogin hidden lg:block"></div>
+         
           
+        </div>
         </div>
       </>
     );
