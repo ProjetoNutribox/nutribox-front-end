@@ -10,3 +10,26 @@
 
     
 }
+
+.fundoHome2{
+    background-image: url(../../assets/fundoHome2.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 80vh;
+    background-size: cover;
+    background-position:center;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+.fundoHome3{
+    background-image: url(../../assets/agricultores.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 80vh;
+    background-size: cover;
+    background-position:center;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+

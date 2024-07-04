@@ -50,7 +50,7 @@ return (
 <div className='grid  grid-cols-2 gap-2 '>
 
 <div className=' object-scale-down px-20' >
-<img src={imageLogin} alt="" />
+<img src={imageLogin} alt=""/>
 </div>
 
       <form className="flex justify-center items-center flex-col  gap-10 form mb-36 px-16 " onSubmit={login}>
