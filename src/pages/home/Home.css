@@ -15,7 +15,7 @@
     background-image: url(../../assets/fundoHome2.png);
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 80vh;
+    min-height: 60vh;
     background-size: cover;
     background-position:center;
     background-blend-mode: darken;
@@ -23,13 +23,26 @@
 
 }
 .fundoHome3{
-    background-image: url(../../assets/agricultores.png);
+    background-image: url(../../assets/organicos2.png);
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 80vh;
+    min-height: 60vh;
     background-size: cover;
     background-position:center;
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.6);
 }
+
+.fundoHome4{
+    background-image: url(../../assets/planta1.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 60vh;
+    background-size: cover;
+    background-position:center;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
 
