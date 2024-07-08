@@ -15,39 +15,85 @@ function Navbar() {
     alert('Usuario deslogado com sucesso')
     navigate('/login')
   }
-  return (
-    <>
+
+  let navBarComponent
+
+  if(usuario.token !== ''){
+    navBarComponent= (
       <div className="color-navbar w-full text-white flex justify-center py-2 px-4 ">
-        <div className="container flex justify-between text-lg  items-center">
+      <div className="container flex justify-between text-lg  items-center">
 
-          <div className='flex gap-2 items-center '>
-          <h1 className="text-2xl font-semibold"> NutriBox</h1>
-         <div><img src={logo} alt="" /></div>
-         </div>
+        <div className='flex gap-2 items-center '>
+        <h1 className="text-2xl font-semibold"> NutriBox</h1>
+       <div><img src={logo} alt="" /></div>
+       </div>
 
-          <div className="flex gap-5">
-            <Link to="/login" className="hover:underline">
-               Login  
-            </Link>
-            <span>|</span>
-            <Link to="/home" className="hover:underline">
-              Início
-            </Link>
-            <span>|</span>
-            <Link to="/sobreNos" className="hover:underline">
-             Sobre   
-            </Link>
-            <span>|</span>
-            <Link to="/catalogo" className="hover:underline">
-              Catálogo
-            </Link>
-            <span>|</span>
-            <Link to='' onClick={logout} className='hover:underline'>   Sair   </Link>
-            <span>|</span>
-            <div className="hover:underline">Minha Conta</div>
-          </div>
+        <div className="flex gap-5">
+          <Link to="/home" className="hover:underline">
+            Início
+          </Link>
+          <span>|</span>
+          <Link to="/sobreNos" className="hover:underline">
+           Sobre   
+          </Link>
+          <span>|</span>
+          <Link to="/catalogo" className="hover:underline">
+            Catálogo
+          </Link>
+          <span>|</span>
+          <Link to='' className="hover:underline">Minha Conta</Link>
+          <span>|</span>
+          
+          <Link to='/login' onClick={logout} >
+          <button className='border rounded-lg px-10 bg-white text-[#457D00] hover:bg-[#FB7F01] hover:text-white hover:underline'>Sair</button> 
+          </Link>
+          
+          
         </div>
       </div>
+    </div>
+
+    )
+
+  }else {
+    navBarComponent = (
+      <div className="color-navbar w-full text-white flex justify-center py-2 px-4 ">
+      <div className="container flex justify-between text-lg  items-center">
+
+        <div className='flex gap-2 items-center '>
+        <h1 className="text-2xl font-semibold"> NutriBox</h1>
+       <div><img src={logo} alt="" /></div>
+       </div>
+
+        <div className="flex gap-5">
+          <Link to="/home" className="hover:underline">
+            Início
+          </Link>
+          <span>|</span>
+          <Link to="/sobreNos" className="hover:underline">
+           Sobre   
+          </Link>
+          <span>|</span>
+          <Link to="/catalogo" className="hover:underline">
+            Catálogo
+          </Link>
+          <span>|</span>
+          
+          <Link to="/login" >
+          <button className='border rounded-lg px-9 bg-white text-[#457D00] hover:bg-[#FB7F01] hover:text-white hover:underline'>Login  </button>
+             
+          </Link>
+          
+        </div>
+      </div>
+    </div>
+    )
+  }
+
+
+  return (
+    <>
+     {navBarComponent}
     </>
   );
 }
