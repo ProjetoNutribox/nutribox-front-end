@@ -9,6 +9,7 @@ import Catalogo from './pages/catalogo/Catalogo';
 import Sobre from './pages/sobreNos/Sobre';
 import Cadastro from './pages/cadastro/Cadastro';
 import { AuthProvider } from './contexts/AuthContexts';
+import Perfil from './pages/perfil/Perfil';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/catalogo" element={<Catalogo />} />
               <Route path="/sobreNos" element={<Sobre />} />
+              <Route path="/perfil" element={<Perfil />} />
             </Routes>
           </div>
           <Footer />
