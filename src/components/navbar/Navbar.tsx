@@ -44,7 +44,7 @@ function Navbar() {
             <span>|</span>
             <Link to='' onClick={logout} className='hover:underline'>   Sair   </Link>
             <span>|</span>
-            <div className="hover:underline">Minha Conta</div>
+            <Link to="/perfil" className="hover:underline">Minha Conta</Link>
           </div>
         </div>
       </div>
