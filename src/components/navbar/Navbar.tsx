@@ -50,6 +50,13 @@ function Navbar() {
           <Link to="/cadastrarCategoria" className="hover:underline">
           Cadastrar Categoria
           </Link>
+
+          <Link to="/produtos" className="hover:underline">
+          Produtos
+          </Link>
+          <Link to="/cadastrarProdutos" className="hover:underline">
+          Cadastrar Produto
+          </Link>
           
           
           <Link to='/login' onClick={logout} >

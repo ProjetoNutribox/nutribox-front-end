@@ -1,24 +1,24 @@
-import React, { useContext, useEffect, useState } from 'react'
-import Categoria from '../../../models/Categoria';
-import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../contexts/AuthContexts';
-import { buscar } from '../../../services/Service';
-import { toastAlerta } from '../../../util/toastAlert';
-import { Dna } from 'react-loader-spinner';
-import CardCategoria from '../cardCategoria/CardCategoria';
+import { useContext, useEffect, useState } from "react";
+import Produto from '../../../models/Produto';
+import { AuthContext } from "../../../contexts/AuthContexts";
+import { useNavigate } from "react-router-dom";
+import { toastAlerta } from "../../../util/toastAlert";
+import { Dna } from "react-loader-spinner";
+import { buscar } from "../../../services/Service";
+import CardProduto from "../cardProduto/CardProduto";
 
-function ListaCategorias() {
+function ListaProdutos() {
 
-    const [categorias, setCategorias] = useState<Categoria[]>([]);
+    const [produtos, setProdutos] = useState<Produto[]>([]);
 
     const navigate = useNavigate();
   
     const { usuario, handleLogout } = useContext(AuthContext);
     const token = usuario.token;
 
-    async function buscarCategorias() {
+    async function buscarProdutos() {
         try {
-          await buscar('/categorias', setCategorias, {
+          await buscar('/produtos', setProdutos, {
             headers: { Authorization: token },
           });
         } catch (error: any) {
@@ -38,14 +38,14 @@ function ListaCategorias() {
       }, [token]);
 
       useEffect(() => {
-        buscarCategorias();
-      }, [categorias.length]);
+        buscarProdutos();
+      }, [produtos.length]);
     
 
 
   return (
     <>
-      {categorias.length === 0 && (
+      {produtos.length === 0 && (
         <Dna
           visible={true}
           height="200"
@@ -59,9 +59,9 @@ function ListaCategorias() {
         <div className="flex justify-center w-full my-4">
             <div className="container flex flex-col">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categorias.map((categoria) => (
+            {produtos.map((produto) => (
               <>
-                <CardCategoria key={categoria.id} categoria={categoria} />
+                <CardProduto key={produto.id} produto={produto} />
               </>
             ))}
           </div>
@@ -76,4 +76,4 @@ function ListaCategorias() {
   )
 }
 
-export default ListaCategorias
+export default ListaProdutos
