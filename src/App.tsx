@@ -13,7 +13,7 @@ import { AuthProvider } from './contexts/AuthContexts';
 import Perfil from './pages/perfil/Perfil';
 import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias';
 import { ToastContainer } from 'react-toastify';
-import FormularioCategoria from './components/categorias/listaCategorias/formularioCategoria/FormularioCategoria';
+import FormularioCategoria from './components/categorias/formularioCategoria/FormularioCategoria';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 
 function App() {

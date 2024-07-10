@@ -5,7 +5,7 @@ import { AuthContext } from '../../../contexts/AuthContexts';
 import { buscar } from '../../../services/Service';
 import { toastAlerta } from '../../../util/toastAlert';
 import { Dna } from 'react-loader-spinner';
-import CardCategoria from './cardCategoria/CardCategoria';
+import CardCategoria from '../cardCategoria/CardCategoria';
 
 function ListaCategorias() {
 

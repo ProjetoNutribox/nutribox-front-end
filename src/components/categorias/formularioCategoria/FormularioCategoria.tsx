@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useContext, useEffect, useState } from 'react'
-import Categoria from '../../../../models/Categoria'
+import Categoria from '../../../models/Categoria'
 import { useNavigate, useParams } from 'react-router-dom';
-import { AuthContext } from '../../../../contexts/AuthContexts';
-import { atualizar, buscar, cadastrar } from '../../../../services/Service';
-import { toastAlerta } from '../../../../util/toastAlert';
+import { AuthContext } from '../../../contexts/AuthContexts';
+import { atualizar, buscar, cadastrar } from '../../../services/Service';
+import { toastAlerta } from '../../../util/toastAlert';
 
 function FormularioCategoria() {
 
