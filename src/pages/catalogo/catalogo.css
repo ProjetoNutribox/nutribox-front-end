@@ -1,8 +1,10 @@
 .fundoCatalogo {
-    background-image: url(../../assets/home.png);
+    background-image: url(../../assets/fundo-fruta-catalogo.png);
       background-repeat: no-repeat;
       width: 100%;
-      min-height: 100vh;
+      min-height: 80vh;
       background-size: cover;
       background-position:center;
+      background-blend-mode: darken;
+      background-color: rgba(0, 0, 0, 0.5);
   }
