@@ -1,7 +1,7 @@
 
 import React, { ChangeEvent, useEffect, useState } from 'react'
 
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import Usuario from '../../models/Usuario'
 
@@ -111,17 +111,21 @@ function Cadastro() {
 
     <>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold container my-16 ">
 
-        <div className="fundoCadastro hidden lg:block"></div>
+         <div className="fundoCadastro "></div> 
 
-        <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
+        <form className='flex justify-center items-center flex-col w-5/6  gap-10 my-10 ' onSubmit={cadastrarNovoUsuario}>
 
-          <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
+        <div className='flex  gap-10'>
 
+ <Link to="/login"><h2 className="   text-5xl   font-light login-titulo hover:text-sky-800 ">Login</h2></Link>
+<span className='text-4xl font-light login-titulo'>|</span>
+ <h2 className="   text-5xl   font-light login-titulo">Cadastrar</h2>
+</div>
           <div className="flex flex-col w-full">
 
-            <label htmlFor="nome">Nome</label>
+            <label htmlFor="nome" className='text-[#16171B] pb-4 '>Nome</label>
 
             <input
 
@@ -133,8 +137,7 @@ function Cadastro() {
 
               placeholder="Nome"
 
-              className="border-2 border-slate-700 rounded p-2"
-
+ className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
               value={usuario.nome} 
 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -145,7 +148,7 @@ function Cadastro() {
 
           <div className="flex flex-col w-full">
 
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email"  className='text-[#16171B] pb-4 '>Email</label>
 
             <input
 
@@ -157,7 +160,7 @@ function Cadastro() {
 
               placeholder="Email"
 
-              className="border-2 border-slate-700 rounded p-2"
+              className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
 
               value={usuario.email} 
 
@@ -169,7 +172,7 @@ function Cadastro() {
 
           <div className="flex flex-col w-full">
 
-            <label htmlFor="foto">Foto</label>
+            <label htmlFor="foto"  className='text-[#16171B] pb-4 '>Foto</label>
 
             <input
 
@@ -181,7 +184,7 @@ function Cadastro() {
 
               placeholder="Foto"
 
-              className="border-2 border-slate-700 rounded p-2"
+              className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
 
               value={usuario.foto} 
 
@@ -193,7 +196,7 @@ function Cadastro() {
 
           <div className="flex flex-col w-full">
 
-            <label htmlFor="senha">Senha</label>
+            <label htmlFor="senha"  className='text-[#16171B] pb-4 '>Senha</label>
 
             <input
 
@@ -205,7 +208,7 @@ function Cadastro() {
 
               placeholder="Senha"
 
-              className="border-2 border-slate-700 rounded p-2"
+              className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
 
               value={usuario.senha} 
 
@@ -217,7 +220,7 @@ function Cadastro() {
 
           <div className="flex flex-col w-full">
 
-            <label htmlFor="confirmarSenha">Confirmar Senha</label>
+            <label htmlFor="confirmarSenha"  className='text-[#16171B] pb-4 '>Confirmar Senha</label>
 
             <input
 
@@ -229,7 +232,7 @@ function Cadastro() {
 
               placeholder="Confirmar Senha"
 
-              className="border-2 border-slate-700 rounded p-2"
+              className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
 
               value={confirmaSenha}
 
@@ -241,13 +244,13 @@ function Cadastro() {
 
           <div className="flex justify-around w-full gap-8">
 
-            <button className='rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2' onClick={back}>
+            <button className="rounded-xl color-button   bg-[#FB7F01] hover:bg-[#E03401]  w-1/2 py-4 flex justify-center font-normal text-xl text-[#FFFFFF]" onClick={back}>
 
               Cancelar
 
             </button>
 
-            <button className='rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2' type='submit'>
+            <button className="rounded-xl color-button    bg-[#365314]  hover:bg-[#538d22]   w-1/2 py-4 flex justify-center font-normal text-xl text-[#FFFFFF]" type='submit'>
 
               Cadastrar
 

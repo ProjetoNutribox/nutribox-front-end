@@ -58,6 +58,7 @@ function Navbar() {
   }else {
     navBarComponent = (
       <div className="color-navbar w-full text-white flex justify-center py-2 px-4 ">
+
       <div className="container flex justify-between text-lg  items-center">
 
         <div className='flex gap-2 items-center '>
@@ -84,6 +85,7 @@ function Navbar() {
              
           </Link>
           
+
         </div>
       </div>
     </div>

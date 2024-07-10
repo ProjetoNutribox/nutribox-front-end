@@ -57,10 +57,10 @@ return (
 
       <div className='flex  gap-10'>
 
-<h2 className="   text-5xl   font-light login-titulo">Login</h2>
-<span className='text-4xl font-light login-titulo'>|</span>
-<h2 className="   text-5xl font-light login-titulo ">Cadastrar</h2>
-</div>
+      <Link to="/login"><h2 className="   text-5xl   font-light login-titulo hover:text-sky-800 ">Login</h2></Link>
+      <span className='text-4xl font-light login-titulo'>|</span>
+      <Link to="/cadastro"><h2 className="   text-5xl   font-light login-titulo hover:text-sky-800 ">Cadastrar</h2></Link>
+      </div>
     
         <div className="flex flex-col w-full ">
           <label htmlFor="email" className='text-[#16171B] pb-4 '>Email</label>
