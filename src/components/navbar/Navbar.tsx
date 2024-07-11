@@ -41,7 +41,7 @@ function Navbar() {
             Catálogo
           </Link>
           <span>|</span>
-          <Link to='' className="hover:underline">Minha Conta</Link>
+          <Link to='/perfil' className="hover:underline">Minha Conta</Link>
           <span>|</span>
           <Link to="/categorias" className="hover:underline">
           categorias

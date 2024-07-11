@@ -2,8 +2,12 @@ import React from 'react'
 import fotoPerfil from "../../assets/imagemPerfil.png"
 import fotoUsuarioDefault from "../../assets/fotoUsuarioDefault.png"
 import "./Perfil.css"
+import { Navigate } from 'react-router-dom'
+import ModalPerfil from '../../components/categorias/modalPerfil/ModalPerfil'
 
 function Perfil() {
+
+    // let navigate = Navigate()
 
   return (
     <div className='bg-[#E9EDE5] flex justify-center m-auto py-20'>
@@ -32,7 +36,8 @@ function Perfil() {
                 <h2 className='text-xl'>5x caixas P</h2>
             </div>
             <hr className='mb-14' />
-        <p className='ml-[825px] text-[#457D00] text-xl font-semibold hover:decoration-[#457D00] '>mudar senha</p>
+        <ModalPerfil />
+
         </div>
     </div>
   )
