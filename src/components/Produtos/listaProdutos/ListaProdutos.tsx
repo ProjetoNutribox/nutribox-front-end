@@ -6,10 +6,13 @@ import { toastAlerta } from "../../../util/toastAlert";
 import { Dna } from "react-loader-spinner";
 import { buscar } from "../../../services/Service";
 import CardProduto from "../cardProduto/CardProduto";
+import { FaSearch } from "react-icons/fa";
 
 function ListaProdutos() {
 
     const [produtos, setProdutos] = useState<Produto[]>([]);
+    const [searchTerm, setSearchTerm] = useState<string>('');
+
 
     const navigate = useNavigate();
   
@@ -41,6 +44,9 @@ function ListaProdutos() {
         buscarProdutos();
       }, [produtos.length]);
     
+      const filteredProdutos = produtos.filter((produto) =>
+        produto.nome.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
 
   return (
@@ -56,17 +62,25 @@ function ListaProdutos() {
         />
       )}
 
-        <div className="flex justify-center w-full my-4">
-            <div className="container flex flex-col">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {produtos.map((produto) => (
-              <>
-                <CardProduto key={produto.id} produto={produto} />
-              </>
-            ))}
-          </div>
-        </div>
-      </div>
+<div className="flex flex-col justify-center container mx-auto mb-10">
+                <div className="container flex flex-col my-10 mx-auto w-1/2">
+                    
+                        <input
+                            type="text"
+                            placeholder="Buscar produto..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="p-4 border-2 pl-10 rounded-full mb-4 bg-[#e9f5db] placeholder-lime-900"
+                        />
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {filteredProdutos.map((produto) => (
+                            <CardProduto key={produto.id} produto={produto} />
+                        ))}
+                    </div>
+                </div>
+            
 
 
 

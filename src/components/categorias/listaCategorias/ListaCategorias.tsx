@@ -6,10 +6,14 @@ import { buscar } from '../../../services/Service';
 import { toastAlerta } from '../../../util/toastAlert';
 import { Dna } from 'react-loader-spinner';
 import CardCategoria from '../cardCategoria/CardCategoria';
+import { FaSearch } from "react-icons/fa"; // Importando o ícone de lupa
+
 
 function ListaCategorias() {
 
     const [categorias, setCategorias] = useState<Categoria[]>([]);
+    const [searchTerm, setSearchTerm] = useState<string>('');
+
 
     const navigate = useNavigate();
   
@@ -40,12 +44,16 @@ function ListaCategorias() {
       useEffect(() => {
         buscarCategorias();
       }, [categorias.length]);
+
+      const filteredCategorias = categorias.filter((categoria) =>
+        categoria.nome.toLowerCase().includes(searchTerm.toLowerCase())
+      );
     
 
 
   return (
     <>
-      {categorias.length === 0 && (
+       {categorias.length === 0 && (
         <Dna
           visible={true}
           height="200"
@@ -54,23 +62,33 @@ function ListaCategorias() {
           wrapperStyle={{}}
           wrapperClass="dna-wrapper mx-auto"
         />
-      )}
+      )} 
 
-        <div className="flex justify-center w-full my-4">
-            <div className="container flex flex-col">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categorias.map((categoria) => (
-              <>
-                <CardCategoria key={categoria.id} categoria={categoria} />
-              </>
+
+
+      
+<div className="flex flex-col justify-center w-full mb-10  ">
+        <div className="container flex flex-col my-10 mx-auto w-1/2">
+        
+          <input
+            type="text"
+            placeholder= " Buscar categoria..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="p-4 border-2   rounded-full mb-4 bg-[#e9f5db] placeholder-lime-900  "
+          />
+         
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredCategorias.map((categoria) => (
+              <CardCategoria key={categoria.id} categoria={categoria} />
             ))}
           </div>
-        </div>
       </div>
 
 
-
-
+      
     
     </>
   )
