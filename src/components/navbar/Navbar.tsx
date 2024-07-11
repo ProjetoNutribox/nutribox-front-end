@@ -89,7 +89,7 @@ function Navbar() {
           <Link to="/sobreNos" className="hover:underline">
            Sobre   
           </Link>
-         
+    
           <Link to="/catalogo" className="hover:underline">
             Catálogo
           </Link>
