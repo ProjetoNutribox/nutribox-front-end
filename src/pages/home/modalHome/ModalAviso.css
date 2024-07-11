@@ -1,0 +1,31 @@
+.modal-content {
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    background: white;
+    max-width: 650px; 
+    margin: auto; 
+  }
+
+  .popup-content {
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+    width: 35%;
+  }
+   
+  .modal {
+    padding: 20px;
+  }
+   
+  .modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding:  5px;
+    line-height: 20px;
+    right: 0px;
+    top: 0px;
+    font-size: 36px;
+    border-radius: 18px;
+  }
+  

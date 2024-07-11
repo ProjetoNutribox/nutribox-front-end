@@ -5,8 +5,9 @@ import './Home.css';
 import Caixa from './../../assets/Caixa.png'
 import Box1 from './../../assets/Box1.png'
 import Cesta1 from './../../assets/Cesta22.png'
-import agricultor from './../../assets/agricultor.png'
+import agricultor from './../../assets/'
 import agricultores from '../../assets/agricultores.png'
+import ModalAviso from './../../pages/home/modalHome/ModalAviso'
 
 
 
@@ -105,7 +106,7 @@ function Home() {
     <h2 className='text-xl  font-semibold'> BOX PERSONALIZADA</h2>
     <p>Produtos selecionados da safra de Verão</p>
     <p>R$ 75,00 x até 45 itens inclusos</p>
-    <button className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B]'>Personalize</button>
+    <ModalAviso /> 
     </div>
 
   </div>
