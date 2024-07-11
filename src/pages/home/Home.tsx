@@ -54,7 +54,7 @@ function Home() {
 
 <div className='grid grid-cols-4  text-center my-16 gap-4 mx-auto container text-white'>
 
-  <div className='bg-[#538d22] flex flex-col   rounded-3xl  '>
+  <div className='bg-[#538d22] flex flex-col   rounded-3xl'>
     
     <div>
     <img src={Box1} alt="" className=' rounded-t-3xl' />
@@ -171,7 +171,7 @@ function Home() {
 
 
 <div className=' flex flex-col items-center gap-5 text-[#31572C] '>
-<h2 className='font-semibold text-4xl text-[#31572C]'>Porque escolher o NutriBox?</h2>
+<h2 className='font-semibold text-4xl text-[#31572C]'>Por que escolher o NutriBox?</h2>
 
 <p className='text-3xl text-[#FB7F01] font-medium'>Compre alimentos sem agrotóxicos e contribua com a nossa causa</p>
 </div>

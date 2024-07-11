@@ -43,6 +43,21 @@ function Navbar() {
           <span>|</span>
           <Link to='' className="hover:underline">Minha Conta</Link>
           <span>|</span>
+          <Link to="/categorias" className="hover:underline">
+          categorias
+          </Link>
+          <span>|</span>
+          <Link to="/cadastrarCategoria" className="hover:underline">
+          Cadastrar Categoria
+          </Link>
+
+          <Link to="/produtos" className="hover:underline">
+          Produtos
+          </Link>
+          <Link to="/cadastrarProdutos" className="hover:underline">
+          Cadastrar Produto
+          </Link>
+          
           
           <Link to='/login' onClick={logout} >
           <button className='border rounded-lg px-10 bg-white text-[#457D00] hover:bg-[#FB7F01] hover:text-white hover:underline'>Sair</button> 
@@ -74,7 +89,7 @@ function Navbar() {
           <Link to="/sobreNos" className="hover:underline">
            Sobre   
           </Link>
-          <span>|</span>
+         
           <Link to="/catalogo" className="hover:underline">
             Catálogo
           </Link>
