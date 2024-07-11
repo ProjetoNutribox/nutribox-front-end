@@ -9,6 +9,7 @@ import Categoria from '../../../models/Categoria';
 function FormularioCategoria() {
 
     const [categoria, setCategoria] = useState<Categoria>({} as Categoria)
+    const [categorias, setCategorias] = useState<Categoria[]>([]);
 
     const navigate = useNavigate();
 
@@ -71,9 +72,11 @@ function FormularioCategoria() {
               headers: {
                 Authorization : token
               }
+              
             })
-    
+
             toastAlerta('Categoria cadastrada com sucesso', 'sucesso')
+            retornar()
     
           } catch (error: any) {
             if (error.toString().includes('403')) {
@@ -85,12 +88,15 @@ function FormularioCategoria() {
           }
         }
     
-        retornar()
+       buscarCategorias()
       }
     
       function retornar() {
         navigate("/categorias")
       }
+      useEffect(() => {
+        buscarCategorias();
+      }, [categorias.length]);
 
       
     useEffect(() => {
@@ -99,6 +105,19 @@ function FormularioCategoria() {
           navigate('/login');
         }
       }, [token]);
+
+      async function buscarCategorias() {
+        try {
+          await buscar('/categorias', setCategorias, {
+            headers: { Authorization: token },
+          });
+        } catch (error: any) {
+          if (error.toString().includes('403')) {
+            toastAlerta('O token expirou, favor logar novamente', 'info')
+            handleLogout()
+          }
+        }
+      }
 
 
 
@@ -126,8 +145,8 @@ function FormularioCategoria() {
                  value={categoria.descricao}
                  onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}/>
             </div>
-            <button className='rounded text-slate-100 bg-indigo-400
-             hover:bg-indigo-800 w-1/2 py-2 mx-auto block' type='submit'>
+            <button className='rounded text-slate-100 bg-[#457D00]
+             hover:bg-[#FB7F01] w-1/2 py-2 mx-auto block' type='submit'>
                 {id === undefined ? 'Cadastrar' : 'Editar' }</button>
         </form>
     </div>

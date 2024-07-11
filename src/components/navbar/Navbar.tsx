@@ -41,22 +41,16 @@ function Navbar() {
             Catálogo
           </Link>
           <span>|</span>
-          <Link to='' className="hover:underline">Minha Conta</Link>
-          <span>|</span>
+          
           <Link to="/categorias" className="hover:underline">
           categorias
           </Link>
           <span>|</span>
-          <Link to="/cadastrarCategoria" className="hover:underline">
-          Cadastrar Categoria
-          </Link>
-
           <Link to="/produtos" className="hover:underline">
           Produtos
           </Link>
-          <Link to="/cadastrarProdutos" className="hover:underline">
-          Cadastrar Produto
-          </Link>
+          <span>|</span>
+          <Link to='/perfil' className="hover:underline">Minha Conta</Link>
           
           
           <Link to='/login' onClick={logout} >
@@ -89,7 +83,7 @@ function Navbar() {
           <Link to="/sobreNos" className="hover:underline">
            Sobre   
           </Link>
-         
+          <span>|</span>
           <Link to="/catalogo" className="hover:underline">
             Catálogo
           </Link>

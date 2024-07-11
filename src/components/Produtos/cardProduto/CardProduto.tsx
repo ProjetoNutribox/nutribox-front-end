@@ -63,8 +63,7 @@ function CardProduto({produto}: CardProdutoProps) {
           <div className='gap-4 flex flex-col p-5 items-center justify-center h-full'>
 
           <h2 className='text-xl  font-semibold'>{produto.nome}</h2>
-          <p className='text-lg font-semibold uppercase'>Produtos selecionados da safra de {produto.categoria?.nome}</p>
-          <p>{produto.categoria?.descricao}</p>
+          <p className='text-lg font-semibold uppercase'>{produto.categoria?.descricao}</p>
           <p>{produto.tamanho}</p>
           <p>R${produto.preco}</p>
           <button className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B]'>Eu quero</button>
