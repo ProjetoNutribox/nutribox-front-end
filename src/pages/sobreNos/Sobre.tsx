@@ -24,7 +24,7 @@ import iconCard4 from "../../assets/icon4.png";
     const cardsData = [
       { 
         title: 'Agricultura', 
-        description: 'Valorizamos a agricultura local e pequenos produtores orgânicos que cultivam frutas frescas e sustentáveis.', 
+        description: 'Valorizamos a agricultura local e pequenos produtores orgânicos que cultivam alimentos frescos e sustentáveis.', 
         image: imageCard1, 
         icon: iconCard1 
       },
