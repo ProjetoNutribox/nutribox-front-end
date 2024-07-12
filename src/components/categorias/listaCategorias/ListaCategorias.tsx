@@ -7,6 +7,8 @@ import { toastAlerta } from '../../../util/toastAlert';
 import { Dna } from 'react-loader-spinner';
 import CardCategoria from '../cardCategoria/CardCategoria';
 import { FaSearch } from "react-icons/fa"; // Importando o ícone de lupa
+import ModalCategoria from '../modalCategoria/ModalCategoria';
+import FormularioCategoria from '../formularioCategoria/FormularioCategoria';
 
 
 function ListaCategorias() {
@@ -50,7 +52,6 @@ function ListaCategorias() {
       );
     
 
-
   return (
     <>
        {categorias.length === 0 && (
@@ -79,10 +80,14 @@ function ListaCategorias() {
           />
          
         </div>
+        <div className='flex pl-60'>
+          <ModalCategoria/>
+          
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mx-auto" >
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCategorias.map((categoria) => (
-              <CardCategoria key={categoria.id} categoria={categoria} />
+              <CardCategoria key={categoria.id} categoria={categoria} foto={'https://i.ibb.co/M6TRbrz/box-outono.jpg'} />
             ))}
           </div>
       </div>

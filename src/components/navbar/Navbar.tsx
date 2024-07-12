@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import React, { useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContexts';
 import logo from '../../assets/logo.png'
+import { toastAlerta } from '../../util/toastAlert';
 
 
 function Navbar() {
@@ -12,7 +13,7 @@ function Navbar() {
 
   function logout(){
     handleLogout()
-    alert('Usuario deslogado com sucesso')
+    toastAlerta('Usuario deslogado com sucesso', "sucesso")
     navigate('/login')
   }
 
@@ -44,19 +45,14 @@ function Navbar() {
           <Link to='/perfil' className="hover:underline">Minha Conta</Link>
           <span>|</span>
           <Link to="/categorias" className="hover:underline">
-          categorias
+          Categorias
           </Link>
           <span>|</span>
-          <Link to="/cadastrarCategoria" className="hover:underline">
-          Cadastrar Categoria
-          </Link>
-
           <Link to="/produtos" className="hover:underline">
           Produtos
           </Link>
-          <Link to="/cadastrarProdutos" className="hover:underline">
-          Cadastrar Produto
-          </Link>
+          <span>|</span>
+          <Link to='/perfil' className="hover:underline">Minha Conta</Link>
           
           
           <Link to='/login' onClick={logout} >
@@ -89,7 +85,7 @@ function Navbar() {
           <Link to="/sobreNos" className="hover:underline">
            Sobre   
           </Link>
-         
+          <span>|</span>
           <Link to="/catalogo" className="hover:underline">
             Catálogo
           </Link>
