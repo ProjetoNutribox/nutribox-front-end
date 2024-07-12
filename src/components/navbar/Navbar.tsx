@@ -4,6 +4,8 @@ import React, { useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContexts';
 import logo from '../../assets/logo.png'
 import { toastAlerta } from '../../util/toastAlert';
+import { PiShoppingCartThin } from 'react-icons/pi';
+import { ShoppingCart } from '@phosphor-icons/react';
 
 
 function Navbar() {
@@ -42,8 +44,6 @@ function Navbar() {
             Catálogo
           </Link>
           <span>|</span>
-          <Link to='/perfil' className="hover:underline">Minha Conta</Link>
-          <span>|</span>
           <Link to="/categorias" className="hover:underline">
           Categorias
           </Link>
@@ -53,6 +53,8 @@ function Navbar() {
           </Link>
           <span>|</span>
           <Link to='/perfil' className="hover:underline">Minha Conta</Link>
+          <span>|</span>
+          <Link to="/carrinho" ><PiShoppingCartThin className=' w-7 h-7 mr-7 ml-7 hover:' /></Link>
           
           
           <Link to='/login' onClick={logout} >

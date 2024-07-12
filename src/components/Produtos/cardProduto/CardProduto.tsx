@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 
@@ -6,13 +6,20 @@ import { Link } from 'react-router-dom'
 import Produto from '../../../models/Produto';
 import { DotsThree } from '@phosphor-icons/react';
 import { Menu } from '@headlessui/react';
+import { CarrinhoContext } from '../../../contexts/CarrinhoContext';
 
 interface CardProdutoProps {
   produto: Produto
 }
 
 function CardProduto({produto}: CardProdutoProps) {
-  
+
+  const{adicionarItem, listaCarrinho} = useContext(CarrinhoContext)
+
+  useEffect(() => {
+  console.log(listaCarrinho)
+
+  }, [listaCarrinho.length])
   return (
     
     <>
@@ -65,8 +72,11 @@ function CardProduto({produto}: CardProdutoProps) {
           <h2 className='text-2xl  font-semibold  bg-gradient-to-r from-[#538d22] to-[#FB7F01] bg-clip-text text-transparent'>{produto.nome}</h2>
           <p className='text-lg font-semibold uppercase'>{produto.categoria?.descricao}</p>
           <p>{produto.tamanho}</p>
-          <p>R${produto.preco}</p>
-          <button className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B] text-white text-xl '> <span className='hover:shadow-black shadow-2xl'>Eu quero</span> </button>
+          <p> {new Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL',
+            }).format(produto.preco)}</p>
+          <button className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B] text-white text-xl '> <span className='hover:shadow-black shadow-2xl' onClick={() => adicionarItem(produto)}>Eu quero</span> </button>
 
         </div>
 
