@@ -1,10 +1,54 @@
-.fundoCatalogo {
+.fundoCardPrimavera2 {
     background-image: url(../../assets/CardPrimavera.png);
       background-repeat: no-repeat;
       width: 100%;
-      min-height: 80vh;
+      min-height: 60vh;
       background-size: cover;
       background-position:center;
       background-blend-mode: darken;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
   }
+
+  .fundoCardInverno {
+    background-image: url(../../assets/CardInverno.png);
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 60vh;
+      background-size: cover;
+      background-position:center;
+      background-blend-mode: darken;
+      background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .fundoCardVerao {
+    background-image: url(../../assets/CarVerao2.png);
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 60vh;
+      background-size: cover;
+      background-position:center;
+      background-blend-mode: darken;
+      background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .fundoCardOutono {
+    background-image: url(../../assets/CardOutono.png);
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 60vh;
+      background-size: cover;
+      background-position:center;
+      background-blend-mode: darken;
+      background-color: rgba(0, 0, 0, 0.6);
+  }
+
+.fundoHeaderCatalogo{
+  background-image: url(../../assets/FundoCatalogo.png);
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 60vh;
+      background-size: cover;
+      background-position:center;
+      background-blend-mode: darken;
+      background-color: rgba(0, 0, 0, 0.2);
+}
