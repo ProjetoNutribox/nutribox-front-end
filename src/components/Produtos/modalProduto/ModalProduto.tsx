@@ -7,7 +7,7 @@ import FormularioProduto from '../formularioProduto/FormularioProduto'
 function ModalProduto() {
   return (
     <>
-    <Popup trigger={<button className='border rounded-xl px-8 bg-gray-200 hover:bg-white hover:text-indigo-800'>Novo +</button>} modal>
+    <Popup trigger={<button className='border rounded-xl px-8 bg-gray-200 hover:bg-white hover:text-black'>Novo +</button>} modal>
         <div>
             <FormularioProduto/>
         </div>

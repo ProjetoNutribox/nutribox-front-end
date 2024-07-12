@@ -94,9 +94,6 @@ function FormularioCategoria() {
       function retornar() {
         navigate("/categorias")
       }
-      useEffect(() => {
-        buscarCategorias();
-      }, [categorias.length]);
 
       
     useEffect(() => {
