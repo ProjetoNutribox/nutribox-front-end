@@ -55,13 +55,9 @@ function Navbar() {
           <Link to='/perfil' className="hover:underline">Minha Conta</Link>
           <span>|</span>
           <Link to="/carrinho" ><PiShoppingCartThin className=' w-7 h-7 mr-7 ml-7 hover:' /></Link>
-          
-          
           <Link to='/login' onClick={logout} >
           <button className='border rounded-lg px-10 bg-white text-[#457D00] hover:bg-[#FB7F01] hover:text-white hover:underline'>Sair</button> 
           </Link>
-          
-          
         </div>
       </div>
     </div>

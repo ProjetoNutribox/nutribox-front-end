@@ -76,7 +76,7 @@ function CardProduto({produto}: CardProdutoProps) {
               style: 'currency',
               currency: 'BRL',
             }).format(produto.preco)}</p>
-          <button className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B] text-white text-xl '> <span className='hover:shadow-black shadow-2xl' onClick={() => adicionarItem(produto)}>Eu quero</span> </button>
+          <button className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B] text-white text-xl '> <span className='hover:shadow-black shadow-2xl' onClick={() => adicionarItem(produto)}>Comprar</span> </button>
 
         </div>
 
