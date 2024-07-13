@@ -45,7 +45,7 @@ useEffect(() => {
 
 
   return (
-    <div className='container border p-9 shadow-2xl mx-auto h-full flex flex-col items-center justify-center gap-10'>
+    <div className='container border p-9 shadow-2xl mx-auto h-full flex flex-col items-center justify-center mt-20 rounded-2xl '>
       <div>
         <h1 className=' text-5xl justify-center'>Meu carrinho</h1>
       </div>
