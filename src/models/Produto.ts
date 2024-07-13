@@ -8,4 +8,5 @@ export default interface Produto {
     quantidade: number;
     foto: string;
     categoria: Categoria| null;
+    qtd?: number
   }

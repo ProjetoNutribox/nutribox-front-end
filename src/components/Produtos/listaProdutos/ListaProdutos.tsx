@@ -1,12 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import Produto from '../../../models/Produto';
 import { AuthContext } from "../../../contexts/AuthContexts";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toastAlerta } from "../../../util/toastAlert";
 import { Dna } from "react-loader-spinner";
 import { buscar } from "../../../services/Service";
 import CardProduto from "../cardProduto/CardProduto";
 import { FaSearch } from "react-icons/fa";
+import ModalProduto from "../modalProduto/ModalProduto";
 
 function ListaProdutos() {
 
@@ -72,6 +73,12 @@ function ListaProdutos() {
                             onChange={(e) => setSearchTerm(e.target.value)}
                             className="p-4 border-2 pl-10 rounded-full mb-4 bg-[#e9f5db] placeholder-lime-900"
                         />
+                    </div>
+                    <div>
+                      <Link to='/cadastrarProdutos'>
+                      <button className='border rounded-xl px-8 bg-gray-200 hover:bg-white hover:text-black'>Novo +</button>
+                      </Link>
+                      
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

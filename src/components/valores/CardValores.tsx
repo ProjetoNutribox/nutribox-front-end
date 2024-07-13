@@ -1,20 +1,18 @@
-import React from 'react'
-import imageValoresAgricultura from "../../assets/imagemValores.jpg"
-import iconeValoresAgricultura from "../../assets/iconeValores.png"
+import React from 'react';
 
-function CardValores() {
+function CardValores({ title, description, image, icon }) {
   return (
-    <div className='flex flex-col w-72 h-96 bg-[#FFFFFF] gap-4 rounded-xl shadow-md '>
-    <img className='rounded-t-xl' src={imageValoresAgricultura} alt="" />
-    <div className=' flex items-center gap-2 mx-auto'>
-      <h2>Agricultura</h2>
-      <img className=' w-8 h-8 ' src={iconeValoresAgricultura} alt="" />
+    <div className='flex flex-col w-72 h-96 bg-[#FFFFFF] gap-4 rounded-xl shadow-lg shadow-slate-500'>
+      <img className='rounded-t-xl shadow-2xl' src={image} alt="" />
+      <div className='flex items-center gap-2 mx-auto'>
+        <h2>{title}</h2>
+        <img className='w-8 h-8' src={icon} alt="" />
+      </div>
+      <div className='mx-10'>
+        <p>{description}</p>
+      </div>
     </div>
-    <div className=' mx-10'>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    </div>
-  </div>
-  )
+  );
 }
 
-export default CardValores
+export default CardValores;
