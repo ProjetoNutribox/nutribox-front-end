@@ -64,6 +64,7 @@ function ListaProdutos() {
       )}
 
 <div className="flex flex-col justify-center container mx-auto mb-10">
+               
                 <div className="container flex flex-col my-10 mx-auto w-1/2">
                     
                         <input
@@ -74,9 +75,14 @@ function ListaProdutos() {
                             className="p-4 border-2 pl-10 rounded-full mb-4 bg-[#e9f5db] placeholder-lime-900"
                         />
                     </div>
+                    <div className="flex gap-8">
                     <div>
+                  <Link to='/categorias'>
+                  <button className='border rounded-xl px-8 py-2 bg-gray-200 hover:bg-white hover:text-black'>Categorias</button>
+                  </Link>
+                </div>
                       <Link to='/cadastrarProdutos'>
-                      <button className='border rounded-xl px-8 bg-gray-200 hover:bg-white hover:text-black'>Novo +</button>
+                      <button className='border rounded-xl px-12 py-2 bg-gray-200 hover:bg-white hover:text-black '>Novo +</button>
                       </Link>
                       
                     </div>

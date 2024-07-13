@@ -138,8 +138,10 @@ function Home() {
     <p className='text-xl text-center font-normal '>Nós selecionamos alimentos orgânicos direto de <span className='font-semibold'>pequenos produtores.</span></p>
     <p className='text-xl text-center font-normal '>Você pode escolher uma  <span className='font-semibold'>cesta pronta</span> com alimentos pré selecionados , ou pode <span className='font-semibold'>personalizar</span> de acordo com a sua preferência.</p>
 
+    <Link className='bg-[#EEBA0B]  py-4 px-2 w-1/3 rounded-xl text-xl mt-20 text-white hover:bg-[#679436]  hover:underline text-center' to='/catalogo'>
+    <button >Faça sua feira</button>
+    </Link>
     
-    <button className='bg-[#EEBA0B]  py-4 px-2 w-1/3 rounded-xl text-xl mt-20 text-white hover:bg-[#679436]  hover:underline'>Faça sua feira</button>
     </div>
     
 
@@ -162,8 +164,10 @@ function Home() {
     <p className='text-xl text-center font-normal '>Adquirindo alimentos frescos e de qualidade da <span className='font-semibold'>safra do mês</span>.</p>
 
     <p className='text-xl text-center font-normal '>Alimentando-se  com <span className='font-semibold'>alimentos nutritivos</span> e  <span className='font-semibold'>livres de agrotóxicos</span>.</p>
-
-    <button className='  bg-[#FB7F01]  py-4 px-2 w-1/3 rounded-xl text-xl text-white hover:bg-[#679436]   hover:underline'>Saiba mais</button>
+ 
+    <Link to='/sobreNos' className='  bg-[#FB7F01]  py-4 px-2 w-1/3 rounded-xl text-xl text-white hover:bg-[#679436]   hover:underline text-center'>
+    <button >Saiba mais</button>
+    </Link>
     </div>
 
   </div>

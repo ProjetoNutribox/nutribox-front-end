@@ -80,9 +80,9 @@ function ListaCategorias() {
           />
          
         </div>
-        <div className='flex pl-60'>
+        <div className='flex pl-72'>
           <Link to='/cadastrarCategoria'>
-               <button className='border rounded-xl px-9 ml-10 bg-gray-200 hover:bg-white hover:text-black'>Novo +</button>
+               <button className='border rounded-xl px-12 py-2 bg-gray-200 hover:bg-white hover:text-black '>Novo +</button>
           </Link>
           
         </div>
