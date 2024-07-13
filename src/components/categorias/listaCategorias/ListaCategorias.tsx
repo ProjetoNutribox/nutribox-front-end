@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Categoria from '../../../models/Categoria';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContexts';
 import { buscar } from '../../../services/Service';
 import { toastAlerta } from '../../../util/toastAlert';
@@ -81,7 +81,9 @@ function ListaCategorias() {
          
         </div>
         <div className='flex pl-60'>
-          <ModalCategoria/>
+          <Link to='/cadastrarCategoria'>
+               <button className='border rounded-xl px-9 ml-10 bg-gray-200 hover:bg-white hover:text-black'>Novo +</button>
+          </Link>
           
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mx-auto" >

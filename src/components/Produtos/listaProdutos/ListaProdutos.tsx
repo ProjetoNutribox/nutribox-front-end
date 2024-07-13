@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import Produto from '../../../models/Produto';
 import { AuthContext } from "../../../contexts/AuthContexts";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toastAlerta } from "../../../util/toastAlert";
 import { Dna } from "react-loader-spinner";
 import { buscar } from "../../../services/Service";
@@ -75,7 +75,9 @@ function ListaProdutos() {
                         />
                     </div>
                     <div>
-                      <ModalProduto/>
+                      <Link to='/cadastrarProdutos'>
+                      <button className='border rounded-xl px-8 bg-gray-200 hover:bg-white hover:text-black'>Novo +</button>
+                      </Link>
                       
                     </div>
 
