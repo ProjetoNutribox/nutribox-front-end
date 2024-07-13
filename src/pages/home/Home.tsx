@@ -8,6 +8,7 @@ import Cesta1 from './../../assets/Cesta22.png'
 import agricultor from './../../assets/'
 import agricultores from '../../assets/agricultores.png'
 import ModalAviso from './../../pages/home/modalHome/ModalAviso'
+import { Link } from 'react-router-dom';
 
 
 
@@ -29,7 +30,7 @@ function Home() {
               </div>
               <div className="flex justify-around gap-6">
               
-                <button className='rounded-2xl bg-white text-lime-800  text-xl  hover:bg-[#EEBA0B] font-bold py-4 px-8'>VEM PRA HORTA</button>
+            <Link to ='/produtos' className='rounded-2xl bg-white text-lime-800  text-xl  hover:bg-[#EEBA0B] font-bold py-4 px-8'>    <button >VEM PRA HORTA</button></Link>
               
               </div>
          
