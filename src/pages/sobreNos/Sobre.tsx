@@ -90,7 +90,7 @@ import iconCard4 from "../../assets/icon4.png";
         </div>
         <div className='container mx-auto my-auto '>
       <div className='h-[40vw] bg-[#C1CF84] mb-24 flex mx-9 rounded-2xl '>
-      <iframe className='h-full w-[800px]' src="https://www.youtube.com/embed/QFQyg1UxXvA?si=czUcTuTyVQBPJf7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe className='h-full w-[800px] rounded-2xl' src="https://www.youtube.com/embed/QFQyg1UxXvA?si=czUcTuTyVQBPJf7k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       <div className=' flex flex-col w-[558px] my-auto mx-8 '>
         <h2 className='font-medium text-4xl mb-14 text-center'>CONHEÇA MAIS SOBRE NOSSOS PRODUTORES!</h2>
         <p className='text-center text-xl'>Ao escolher NutriBox, você não apenas adquire uma alimentação saudável, mas também fortalece diretamente iniciativas sustentáveis e estimula produtores locais. Conheça mais sobre nossos produtores e descubra como estamos transformando a forma de consumir alimentos com responsabilidade e consciência ambiental.</p>
