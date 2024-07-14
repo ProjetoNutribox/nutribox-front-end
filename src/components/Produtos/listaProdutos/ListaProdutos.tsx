@@ -6,8 +6,6 @@ import { toastAlerta } from "../../../util/toastAlert";
 import { Dna } from "react-loader-spinner";
 import { buscar } from "../../../services/Service";
 import CardProduto from "../cardProduto/CardProduto";
-import { FaSearch } from "react-icons/fa";
-import ModalProduto from "../modalProduto/ModalProduto";
 
 function ListaProdutos() {
 

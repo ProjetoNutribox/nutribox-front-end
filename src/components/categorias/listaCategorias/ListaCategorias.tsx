@@ -6,9 +6,9 @@ import { buscar } from '../../../services/Service';
 import { toastAlerta } from '../../../util/toastAlert';
 import { Dna } from 'react-loader-spinner';
 import CardCategoria from '../cardCategoria/CardCategoria';
-import { FaSearch } from "react-icons/fa"; // Importando o ícone de lupa
-import ModalCategoria from '../modalCategoria/ModalCategoria';
-import FormularioCategoria from '../formularioCategoria/FormularioCategoria';
+
+
+
 
 
 function ListaCategorias() {
