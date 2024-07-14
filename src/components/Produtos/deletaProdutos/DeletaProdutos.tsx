@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import {useNavigate, useParams } from 'react-router-dom'
 import { AuthContext } from '../../../contexts/AuthContexts'
 import { buscar, deletar } from '../../../services/Service'
 import Produto from '../../../models/Produto'
 import { toastAlerta } from '../../../util/toastAlert'
-import { Menu } from '@headlessui/react'
-import { DotsThree } from '@phosphor-icons/react'
+
 
 
 

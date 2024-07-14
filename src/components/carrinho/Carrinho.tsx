@@ -3,11 +3,8 @@ import { CarrinhoContext } from '../../contexts/CarrinhoContext'
 import { AuthContext } from '../../contexts/AuthContexts'
 import { Link, useNavigate } from 'react-router-dom'
 import { toastAlerta } from '../../util/toastAlert'
-import Produto from '../../models/Produto'
 import { Trash } from '@phosphor-icons/react'
-import { SiInstacart } from 'react-icons/si'
 import { FaSeedling } from 'react-icons/fa'
-import { buscar } from '../../services/Service';
 
 
 function Carrinho() {

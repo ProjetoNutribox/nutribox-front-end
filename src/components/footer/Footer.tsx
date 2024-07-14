@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-import { FacebookLogo, InstagramLogo, LinkedinLogo ,LinktreeLogo,GithubLogo} from '@phosphor-icons/react'
+import { LinkedinLogo ,LinktreeLogo,GithubLogo} from '@phosphor-icons/react'
 import { Link} from "react-router-dom";
 import './Footer.css'
 import logo from '../../assets/logo.png'

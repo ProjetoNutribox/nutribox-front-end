@@ -6,7 +6,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContexts';
 import UsuarioLogin from '../../models/UsuarioLogin';
 import { RotatingLines } from 'react-loader-spinner';
-import { cadastrar } from '../../services/Service';
 import imageLogin from '../../assets/imageLogin.png'
 
 

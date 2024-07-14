@@ -5,7 +5,7 @@ import { AuthContext } from '../../contexts/AuthContexts';
 import logo from '../../assets/logo.png'
 import { toastAlerta } from '../../util/toastAlert';
 import { PiShoppingCartThin } from 'react-icons/pi';
-import { ShoppingCart } from '@phosphor-icons/react';
+
 
 
 function Navbar() {

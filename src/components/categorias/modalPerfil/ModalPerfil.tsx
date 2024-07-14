@@ -21,20 +21,20 @@ function ModalPerfil() {
     const [senhaEditada, setSenhaEditada ] = useState(false);
 
     const [infosUsuario, setInfosUsuario ] = useState<UsuarioLogin>({} as UsuarioLogin);
-    const {usuario, handleLogout} = useContext(AuthContext)
+    const {usuario} = useContext(AuthContext)
     
     async function pegarInfoUsuario() { 
-            buscar(`/usuarios/${usuario.id}`, setInfosUsuario, {
+          await  buscar(`/usuarios/${usuario.id}`, setInfosUsuario, {
                 headers: { Authorization: usuario.token },
             })
     }
 
-    async function submitSenha(e: ChangeEvent<HTMLInputElement>){
-        e.preventDefault();
+     async function submitSenha(e: ChangeEvent<HTMLInputElement>){
+      e.preventDefault()
         infosUsuario.senha = mudarSenha.senha
 
         try {
-            atualizar("usuarios/atualizar", infosUsuario, setInfosUsuario, {
+           await atualizar("usuarios/atualizar", infosUsuario, setInfosUsuario, {
                 headers: { Authorization: usuario.token },
             })
             setSenhaEditada(true)
@@ -44,7 +44,7 @@ function ModalPerfil() {
     }
 
 
-    function atualizarEstado(e: ChangeEvent<HTMLFormElement>) {
+    function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
         setMudarSenha({
             ...mudarSenha,
             [e.target.name]: e.target.value
@@ -69,7 +69,7 @@ function ModalPerfil() {
           trigger={<p className='ml-[825px] text-[#457D00] text-xl font-semibold hover:decoration-[#457D00] cursor-pointer '>mudar senha</p>} modal>
             <div>
             <div className='container flex flex-col items-center justify-center mx-auto'>
-        <form  className="w-1/2 flex flex-col gap-4 py-9" onSubmit={submitSenha}>
+        <form onSubmit={() => submitSenha}className="w-1/2 flex flex-col gap-4 py-9" >
             <div className='flex flex-col gap-2'>
             <div className="flex flex-col w-full">
               <label htmlFor="senha" className='text-[#16171B] pb-4'>Senha</label>

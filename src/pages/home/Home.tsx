@@ -5,7 +5,6 @@ import './Home.css';
 import Caixa from './../../assets/Caixa.png'
 import Box1 from './../../assets/Box1.png'
 import Cesta1 from './../../assets/Cesta22.png'
-import agricultor from './../../assets/'
 import agricultores from '../../assets/agricultores.png'
 import ModalAviso from './../../pages/home/modalHome/ModalAviso'
 import { Link } from 'react-router-dom';

@@ -2,7 +2,6 @@ import React from 'react'
 import imageHeaderSobre from "../../assets/image-sobre.png"
 import fazendeiro from "../../assets/fazendeiro-page-sobre.png"
 import CardValores from '../../components/valores/CardValores';
-import Catalogo from '../catalogo/Catalogo';
 import { useNavigate } from 'react-router-dom';
 import imageCard1 from "../../assets/card1.png";
 import imageCard2 from "../../assets/card2.png";

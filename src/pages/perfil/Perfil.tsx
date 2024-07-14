@@ -1,10 +1,6 @@
 import React, { useContext } from 'react'
-import fotoPerfil from "../../assets/imagemPerfil.png"
-import fotoUsuarioDefault from "../../assets/fotoUsuarioDefault.png"
 import "./Perfil.css"
-import { Navigate } from 'react-router-dom'
 import ModalPerfil from '../../components/categorias/modalPerfil/ModalPerfil'
-import Usuario from '../../models/Usuario';
 import { AuthContext } from '../../contexts/AuthContexts'
 
 function Perfil() {
