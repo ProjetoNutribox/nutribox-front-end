@@ -88,7 +88,7 @@ useEffect(() => {
               currency: 'BRL',
             }).format(soma)}</p>
         <div className='mt-32'>
-          {listaCarrinho.length < 1 ? (<button disabled={true} className='border rounded-2xl bg-[#9cb08c] p-3 text-white m-auto w-[300px]' onClick={() => finalizarCompra()}>Carrinho vázio</button>) : 
+          {listaCarrinho.length < 1 ? (<button disabled={true} className='border rounded-2xl bg-[#9cb08c] p-3 text-white m-auto w-[300px]' onClick={() => finalizarCompra()}>Carrinho vazio</button>) : 
           <button disabled={false} className='border rounded-2xl p-3 bg-[#538d22] text-white w-[200px] ' onClick={() => finalizarCompra()}>Comprar</button>}
         </div>
       </div>

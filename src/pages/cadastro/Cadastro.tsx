@@ -111,7 +111,7 @@ function Cadastro() {
 
     <>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold container my-16 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2  place-items-center font-bold container my-16 ">
 
          <div className="fundoCadastro "></div> 
 
