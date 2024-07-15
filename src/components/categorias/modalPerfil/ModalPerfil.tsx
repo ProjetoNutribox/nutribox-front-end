@@ -94,11 +94,9 @@ function ModalPerfil() {
                 onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
               />
             </div>
-            {mudarSenha.senha !== mudarSenha.confirmarSenha ? (<p className=' mx-auto text-[#E03401] font-semibold'>As senhas são diferentes</p>) : (<p></p>)}
+            {mudarSenha.senha !== mudarSenha.confirmarSenha ? (<p className=' mx-auto text-[#E03401] p-5 font-semibold'>As senhas são diferentes</p>) : (<p></p>)}
             {senhaEditada && (<p className=' mx-auto text-[#161] font-semibold'>senha editada com sucesso</p>)}
-            <button  type='submit' className="rounded-xl color-button mx-auto  bg-[#EB4901] hover:bg-[#FB7F01] w-1/4 py-4 flex justify-center font-normal text-xl text-[#FFFFFF]">
-                enviar
-            </button>
+            <button  type='submit' className="rounded-xl color-button mx-auto  bg-[#EB4901] hover:bg-[#FB7F01] p-4 flex justify-center font-normal text-xl text-[#FFFFFF]">enviar</button>
         </form>
             </div>
             </div>
