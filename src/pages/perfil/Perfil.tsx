@@ -33,13 +33,13 @@ function Perfil() {
                 <div className='ml-[135px] w-[800px] my-12'>
                     <h2 className=' mr-[auto] text-xl font-semibold mb-10'>histórico:</h2>
                     {historicoCompra.map(item => (
-                        item.id % 2 != 0 ? (<div className='flex gap-8 bg-[#9cb08c] p-3 rounded-md'>
+                        item.id % 2 != 0 ? (<div className='flex justify-between gap-8 bg-[#9cb08c] p-3 rounded-md'>
                             <p>Compra realizada: {new Intl.DateTimeFormat("en-US").format(item.data)}</p>
                             <p>Preço total: {new Intl.NumberFormat('pt-BR', {
                                 style: 'currency',
                                 currency: 'BRL',
                             }).format(item.soma)}</p>
-                        </div>) : (<div className='flex gap-8 p-3 rounded-md'>
+                        </div>) : (<div className='flex justify-between gap-8 p-3 rounded-md'>
                             <p>Compra realizada: {new Intl.DateTimeFormat("en-US").format(item.data)}</p>
                             <p>Preço total: {new Intl.NumberFormat('pt-BR', {
                                 style: 'currency',

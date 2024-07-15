@@ -42,6 +42,8 @@ function Carrinho() {
         
         
         return (
+          <>
+         
           <div className='container border p-9 shadow-2xl mx-auto h-full flex flex-col items-center justify-center mt-20 rounded-2xl '>
       <div>
         <h1 className=' text-5xl justify-center'>Meu carrinho</h1>
@@ -66,8 +68,9 @@ function Carrinho() {
                 </button>
               </div>
             </div>
+            
 
-)) : (
+  )) : (
   <div className='bg-slate-100 mb-9 p-5 flex justify-between rounded-2xl'>
               <div className=' flex content-between items-center gap-7'>
                 <FaSeedling />
@@ -80,6 +83,7 @@ function Carrinho() {
             </div>
           )}
         </div>
+        
         <div className='p-7 bg-slate-100 ml-8 rounded-xl mb-4 flex flex-col mt-12 content-center h-72'>
           <span className='font-semibold mb-4'>Valor total da compra:</span>
           <p className='font-bold'> {new Intl.NumberFormat('pt-BR', {
@@ -88,11 +92,13 @@ function Carrinho() {
               currency: 'BRL',
             }).format(soma)}</p>
         <div className='mt-32'>
-          {listaCarrinho.length < 1 ? (<button disabled={true} className='border rounded-2xl bg-[#9cb08c] p-3 text-white m-auto w-[300px]' onClick={() => finalizarCompra()}>Carrinho vazio</button>) : 
-          <button disabled={false} className='border rounded-2xl p-3 bg-[#538d22] text-white w-[200px] ' onClick={() => finalizarCompra()}>Comprar</button>}
+          {listaCarrinho.length < 1 ? (<button disabled={true} className='border rounded-2xl bg-[#9cb08c] p-3 text-white m-auto w-[300px]' onClick={() => finalizarCompra(soma)}>Carrinho vazio</button>) : 
+          <button disabled={false} className='border rounded-2xl p-3 bg-[#538d22] text-white w-[200px] ' onClick={() => finalizarCompra(soma)}>Comprar</button>}
         </div>
       </div>
     </div>
+    </div>
+    </>
   )
 }
 
