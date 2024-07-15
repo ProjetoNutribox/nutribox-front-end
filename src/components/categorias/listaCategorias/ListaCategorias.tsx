@@ -80,13 +80,13 @@ function ListaCategorias() {
           />
          
         </div>
-        <div className='flex pl-72'>
-          <Link to='/cadastrarCategoria'>
+        <div className='flex container ml-10'>
+          <Link to='/cadastrarCategoria' >
                <button className='border rounded-xl px-12 py-2 bg-gray-200 hover:bg-white hover:text-black '>Novo +</button>
           </Link>
           
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mx-auto" >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mx-auto container gap-10" >
 
             {filteredCategorias.map((categoria) => (
               <CardCategoria key={categoria.id} categoria={categoria} foto={'https://i.ibb.co/M6TRbrz/box-outono.jpg'} />

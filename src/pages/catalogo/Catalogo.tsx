@@ -84,8 +84,8 @@ function Catalogo() {
 
     <div className='justify-center  my-auto  items-center pt-40 '>
       <div className='flex flex-col gap-4 text-white text-center my-auto'>
-      <h1 className='text-6xl  font-medium text-center leading-relaxed'>Escolha a BOX que melhor combina com você</h1>
-      <button className='text-3xl bg-amber-400 rounded-2xl py-3  px-1 w-1/2 mx-auto  hover:bg-orange-500'><a href="#estacoes">Nossas box são vendidas de acordo com a safra </a></button>
+      <h1 className='text-4xl 2xl:text-6xl  font-medium text-center leading-relaxed'>Escolha a BOX que melhor combina com você</h1>
+      <button className='text-lg 2xl:text-3xl bg-amber-400 rounded-2xl py-3  px-1 w-1/2 mx-auto  hover:bg-orange-500'><a href="#estacoes">Nossas box são vendidas de acordo com a safra </a></button>
 
       </div>
 

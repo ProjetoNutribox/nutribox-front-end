@@ -61,10 +61,11 @@ function Home() {
     <img src={Box1} alt="" className=' rounded-t-3xl' />
     </div>
 <div className='gap-4 flex flex-col p-5 items-center justify-center h-full  '>
-    <h2 className='text-xl  font-semibold'> BOX PEQUENA</h2>
+    <h2 className='text-xl  font-semibold'> MINI BOX</h2>
     <p>Produtos selecionados da safra de inverno</p>
-    <p>R$ 30,00 x 15 itens inclusos</p>
-    <button className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B]'>Eu quero</button>
+    <p>R$ 40,00 x 15 itens inclusos</p>
+    <p className='bg-slate-100 bg-opacity-80 text-slate-800 p-2 rounded-lg'>Serve até <span className='text-lime-900 font-semibold'>2 pessoas</span> </p>
+   <Link to= "/produtos" className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B]'><button >Eu quero</button></Link> 
     </div>
 
   </div>
@@ -75,10 +76,12 @@ function Home() {
     <img src={Box1} alt="" className=' rounded-t-3xl' />
     </div>
 <div className='gap-4 flex flex-col p-5 items-center justify-center h-full  '>
-    <h2 className='text-xl  font-semibold'> BOX MÉDIA</h2>
+    <h2 className='text-xl  font-semibold'>  MÉDIA BOX</h2>
     <p>Produtos selecionados da safra de inverno</p>
-    <p>R$ 45,00 x 25 itens inclusos</p>
-    <button className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B]'>Eu quero</button>
+    <p>R$ 60,00 x 25 itens inclusos</p>
+    <p className='bg-slate-100 bg-opacity-80 text-slate-800 p-2 rounded-lg'>Serve até <span className='text-lime-900 font-semibold'>4 pessoas</span> </p>
+
+    <Link to= "/produtos" className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B]'><button >Eu quero</button></Link> 
     </div>
 
   </div>
@@ -89,10 +92,12 @@ function Home() {
     <img src={Box1} alt="" className=' rounded-t-3xl' />
     </div>
 <div className='gap-4 flex flex-col p-5 items-center justify-center h-full  '>
-    <h2 className='text-xl  font-semibold'> BOX GRANDE</h2>
+    <h2 className='text-xl  font-semibold'> BIG BOX</h2>
     <p>Produtos selecionados da safra de inverno</p>
-    <p>R$ 60,00 x 35 itens inclusos</p>
-    <button className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B]'>Eu quero</button>
+    <p>R$ 90,00 x 35 itens inclusos</p>
+    <p className='bg-slate-100 bg-opacity-80 text-slate-800 p-2 rounded-lg'>Serve até <span className='text-lime-900 font-semibold'>6 pessoas</span> </p>
+
+    <Link to= "/produtos" className='bg-[#FB7F01]  py-4 px-2 w-1/2 rounded-xl hover:bg-[#EEBA0B]'><button >Eu quero</button></Link> 
     </div>
 
   </div>
@@ -105,7 +110,9 @@ function Home() {
 <div className='gap-4 flex flex-col p-5 items-center justify-center h-full  '>
     <h2 className='text-xl  font-semibold'> BOX PERSONALIZADA</h2>
     <p>Produtos selecionados da safra de inverno</p>
-    <p>R$ 75,00 x até 45 itens inclusos</p>
+    <p>R$ 120,00 x até 35 itens inclusos</p>
+    <p className='bg-slate-100 bg-opacity-80 text-slate-800 p-2 rounded-lg'>Serve até <span className='text-lime-900 font-semibold'>6 pessoas</span> </p>
+
     <ModalAviso /> 
     </div>
 
@@ -123,7 +130,7 @@ function Home() {
 </div>
 
 
-<div className='bg-[#31572C] rounded-full p-10 mx-10 my-10'>
+<div className='bg-[#31572C] rounded-full p-10  my-10 container mx-auto'>
 
 <div className='grid grid-cols-2 container gap-10 mx-auto my-10'>
 <div className='flex flex-col   rounded-3xl  '>
@@ -133,11 +140,13 @@ function Home() {
     </div>
 
 <div className='gap-6 flex flex-col p-8 items-center justify-center h-full bg-[#e5e5e5] rounded-b-3xl '>
-    <h3 className='text-3xl  font-semibold text-[#fb5607] '>O vem na minha BOX?</h3>
-    <p className='text-xl text-center font-normal '>Nós selecionamos alimentos orgânicos direto de <span className='font-semibold'>pequenos produtores.</span></p>
-    <p className='text-xl text-center font-normal '>Você pode escolher uma  <span className='font-semibold'>cesta pronta</span> com alimentos pré selecionados , ou pode <span className='font-semibold'>personalizar</span> de acordo com a sua preferência.</p>
+   
+    <h3 className='text-3xl text-center font-semibold text-[#fb5607] '>O vem na minha BOX?</h3>
+    <p className='text-xl text-center font-normal '>Nós selecionamos alimentos orgânicos e nutritivos  direto de <span className='font-semibold'>pequenos produtores.</span></p>
+    <p className='text-xl text-center font-normal '>Você pode escolher uma  <span className='font-semibold'>cesta pronta</span> com alimentos pré selecionados , e em breve poderá   <span className='font-semibold'>personalizar</span> sua cesta de acordo com a sua preferência.</p>
+    <p className='text-xl text-center font-normal '> Selecionamos alimentos de acordo com a safra do mês, garantindo frescor, sabor excepcional e um menor impacto ambiental.</p>
 
-    <Link className='bg-[#EEBA0B]  py-4 px-2 w-1/3 rounded-xl text-xl mt-20 text-white hover:bg-[#679436]  hover:underline text-center' to='/catalogo'>
+    <Link className='bg-[#EEBA0B]  py-4 px-2 w-1/3 rounded-xl text-xl  text-white hover:bg-[#679436]  hover:underline text-center' to='/catalogo'>
     <button >Faça sua feira</button>
     </Link>
     
@@ -156,7 +165,7 @@ function Home() {
     </div>
 
 <div className='gap-6 flex flex-col p-8 items-center justify-center h-full  bg-[#e5e5e5] rounded-b-3xl '>
-    <h3 className='text-3xl  font-semibold text-[#fb5607]'>Comprando com a gente você estará:
+    <h3 className='text-3xl  text-center font-semibold text-[#fb5607]'>Comprando com a gente você estará:
     </h3>
     <p className='text-xl text-center font-normal '> <span className='font-semibold'>Ajudando</span> na renda de pequenos produtores rurais.</p>
     <p className='text-xl text-center font-normal '><span className='font-semibold'>Contribuindo</span> com a doação para ONGs que combatem a fome no mundo.</p>

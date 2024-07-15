@@ -83,13 +83,13 @@ function Carrinho() {
         <div className='p-7 bg-slate-100 ml-8 rounded-xl mb-4 flex flex-col mt-12 content-center h-72'>
           <span className='font-semibold mb-4'>Valor total da compra:</span>
           <p className='font-bold'> {new Intl.NumberFormat('pt-BR', {
-            style: 'currency',
-            currency: 'BRL',
-          }).format(soma)}</p>
-          <div className='mt-32'>
-            {listaCarrinho.length < 1 ? (<button disabled={true} className='border rounded-2xl bg-[#9cb08c] p-3 text-white m-auto w-[300px]'>Carrinho vázio</button>) :
-              <button disabled={false} className='border rounded-2xl p-3 bg-[#538d22] text-white w-[200px] ' onClick={() => {finalizarCompra(soma)}}>Comprar</button>}
-          </div>
+
+              style: 'currency',
+              currency: 'BRL',
+            }).format(soma)}</p>
+        <div className='mt-32'>
+          {listaCarrinho.length < 1 ? (<button disabled={true} className='border rounded-2xl bg-[#9cb08c] p-3 text-white m-auto w-[300px]' onClick={() => finalizarCompra()}>Carrinho vazio</button>) : 
+          <button disabled={false} className='border rounded-2xl p-3 bg-[#538d22] text-white w-[200px] ' onClick={() => finalizarCompra()}>Comprar</button>}
         </div>
       </div>
     </div>
