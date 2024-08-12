@@ -16,13 +16,13 @@ function Home() {
     return (
         <>
         <div className=" w-full  flex justify-center fundoHome">
-          <div className='container grid grid-cols-2 text-white items-center  justify-center'>
+          <div className='container grid grid-cols-1 md:grid-cols-2 text-white items-center  justify-center'>
 
             
             <div className="flex flex-col gap-4 items-center justify-center   py-4">
 
               <div className='flex flex-col gap-6'>
-              <h2 className='text-5xl font-light leading-snug text-center'>Plantando Esperança <br/>
+              <h2 className='text-xl md:text-5xl font-light leading-snug text-center'>Plantando Esperança <br/>
                 & Cultivando Alimentos</h2>
                
               <span className='text-4xl  font-medium py-5 text-center italic'> Nutrindo Vidas</span>
@@ -44,7 +44,7 @@ function Home() {
           <img src={Caixa} alt="" className='h-16'/>
           
 
-  <h2 className='text-4xl font-normal'>Escolha sua   <span className='font-semibold text-[#EEBA0B]'>BOX</span></h2>
+  <h2 className='text-2xl md:text-4xl font-normal'>Escolha sua   <span className='font-semibold text-[#EEBA0B]'>BOX</span></h2>
   <img src={Caixa} alt=""  className='h-16'/>
   {/* <img src={imageBoxes} alt="" className='' /> */}
 </div>
@@ -53,7 +53,7 @@ function Home() {
 
 
 
-<div className='grid grid-cols-4  text-center my-16 gap-4 mx-auto container text-white'>
+<div className='grid grid-cols-1 px-6 md:grid-cols-2 lg:grid-cols-4 sm:px-5 text-center my-16 gap-4 mx-auto container text-white'>
 
   <div className='bg-[#538d22] flex flex-col   rounded-3xl'>
     
@@ -124,15 +124,15 @@ function Home() {
 
 
 <div className=' flex flex-col items-center gap-5 text-[#31572C]  '>
-<h2 className='font-semibold text-5xl text-[#31572C]'>Como funciona o NutriBox?</h2>
+<h2 className='font-semibold text-lg md:text-5xl text-[#31572C]'>Como funciona o NutriBox?</h2>
 
-<p className='text-3xl text-[#FB7F01] font-medium'> Faça a sua feira aqui e escolha alimentos de qualidade.</p>
+<p className='text-lg  md:text-3xl text-center text-[#FB7F01] font-medium'> Faça a sua feira aqui e escolha alimentos de qualidade.</p>
 </div>
 
 
 <div className='bg-[#31572C] rounded-full p-10  my-10 container mx-auto'>
 
-<div className='grid grid-cols-2 container gap-10 mx-auto my-10'>
+<div className='grid grid-cols-1 md:grid-cols-2 container gap-10 mx-auto my-10'>
 <div className='flex flex-col   rounded-3xl  '>
     
     <div>
@@ -141,12 +141,12 @@ function Home() {
 
 <div className='gap-6 flex flex-col p-8 items-center justify-center h-full bg-[#e5e5e5] rounded-b-3xl '>
    
-    <h3 className='text-3xl text-center font-semibold text-[#fb5607] '>O vem na minha BOX?</h3>
-    <p className='text-xl text-center font-normal '>Nós selecionamos alimentos orgânicos e nutritivos  direto de <span className='font-semibold'>pequenos produtores.</span></p>
-    <p className='text-xl text-center font-normal '>Você pode escolher uma  <span className='font-semibold'>cesta pronta</span> com alimentos pré selecionados , e em breve poderá   <span className='font-semibold'>personalizar</span> sua cesta de acordo com a sua preferência.</p>
-    <p className='text-xl text-center font-normal '> Selecionamos alimentos de acordo com a safra do mês, garantindo frescor, sabor excepcional e um menor impacto ambiental.</p>
+    <h3 className='text-2xl md:text-3xl text-center font-semibold text-[#fb5607] '>O vem na minha BOX?</h3>
+    <p className='md:text-xl text-center font-normal '>Nós selecionamos alimentos orgânicos e nutritivos  direto de <span className='font-semibold'>pequenos produtores.</span></p>
+    <p className='md:text-xl text-center font-normal '>Você pode escolher uma  <span className='font-semibold'>cesta pronta</span> com alimentos pré selecionados , e em breve poderá   <span className='font-semibold'>personalizar</span> sua cesta de acordo com a sua preferência.</p>
+    <p className='md:text-xl text-center font-normal '> Selecionamos alimentos de acordo com a safra do mês, garantindo frescor, sabor excepcional e um menor impacto ambiental.</p>
 
-    <Link className='bg-[#EEBA0B]  py-4 px-2 w-1/3 rounded-xl text-xl  text-white hover:bg-[#679436]  hover:underline text-center' to='/catalogo'>
+    <Link className='bg-[#EEBA0B]  py-4 px-2 w-1/3 rounded-xl text-xs md:text-sm lg:text-xl text-white hover:bg-[#679436]  hover:underline text-center' to='/catalogo'>
     <button >Faça sua feira</button>
     </Link>
     
@@ -164,16 +164,16 @@ function Home() {
     <img src={agricultores} alt="" className=' rounded-t-3xl w-full ' />
     </div>
 
-<div className='gap-6 flex flex-col p-8 items-center justify-center h-full  bg-[#e5e5e5] rounded-b-3xl '>
-    <h3 className='text-3xl  text-center font-semibold text-[#fb5607]'>Comprando com a gente você estará:
+<div className='gap-6 flex flex-col p-8 items-center justify-center h-full md:pb-12  bg-[#e5e5e5] rounded-b-3xl '>
+    <h3 className='text-2xl md:text-3xl  text-center font-semibold text-[#fb5607]'>Comprando com a gente você estará:
     </h3>
-    <p className='text-xl text-center font-normal '> <span className='font-semibold'>Ajudando</span> na renda de pequenos produtores rurais.</p>
-    <p className='text-xl text-center font-normal '><span className='font-semibold'>Contribuindo</span> com a doação para ONGs que combatem a fome no mundo.</p>
-    <p className='text-xl text-center font-normal '>Adquirindo alimentos frescos e de qualidade da <span className='font-semibold'>safra do mês</span>.</p>
+    <p className='text-x md:text-xl text-center font-normal '> <span className='font-semibold'>Ajudando</span> na renda de pequenos produtores rurais.</p>
+    <p className='text-x  md:text-xl text-center font-normal '><span className='font-semibold'>Contribuindo</span> com a doação para ONGs que combatem a fome no mundo.</p>
+    <p className='text-x  tmd:text-xl text-center font-normal '>Adquirindo alimentos frescos e de qualidade da <span className='font-semibold'>safra do mês</span>.</p>
 
-    <p className='text-xl text-center font-normal '>Alimentando-se  com <span className='font-semibold'>alimentos nutritivos</span> e  <span className='font-semibold'>livres de agrotóxicos</span>.</p>
+    <p className='text-x md:text-xl text-center font-normal '>Alimentando-se  com <span className='font-semibold'>alimentos nutritivos</span> e  <span className='font-semibold'>livres de agrotóxicos</span>.</p>
  
-    <Link to='/sobreNos' className='  bg-[#FB7F01]  py-4 px-2 w-1/3 rounded-xl text-xl text-white hover:bg-[#679436]   hover:underline text-center'>
+    <Link to='/sobreNos' className='  bg-[#FB7F01] md:mt-10 py-4 px-2 w-1/3 rounded-xl text-xs md:text-sm lg:text-xl text-white hover:bg-[#679436]   hover:underline text-center'>
     <button >Saiba mais</button>
     </Link>
     </div>
@@ -185,9 +185,9 @@ function Home() {
 
 
 <div className=' flex flex-col items-center gap-5 text-[#31572C] '>
-<h2 className='font-semibold text-4xl text-[#31572C]'>Por que escolher o NutriBox?</h2>
+<h2 className='font-semibold text-lg md:text-4xl text-[#31572C]'>Por que escolher o NutriBox?</h2>
 
-<p className='text-3xl text-[#FB7F01] font-medium'>Compre alimentos sem agrotóxicos e contribua com a nossa causa.</p>
+<p className='text-lg text-center mx-4 lg:text-3xl text-[#FB7F01] font-medium'>Compre alimentos sem agrotóxicos e contribua com a nossa causa.</p>
 </div>
 
 
@@ -196,7 +196,7 @@ function Home() {
        
        
 
-<div className='grid grid-cols-3 text-center my-16 gap-6 mx-auto container text-white'>
+<div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 text-center my-16 gap-6 mx-auto container text-white'>
 
   
 
@@ -204,7 +204,7 @@ function Home() {
     
     
 <div className='gap-4 flex flex-col p-5 items-center justify-center h-full my-auto text-xl  '>
-    <h2 className='text-3xl  font-semibold uppercase text-[#FB7F01]'>Você está no controle.</h2>
+    <h2 className='md:text-3xl lg:text-3xl font-semibold uppercase text-[#FB7F01]'>Você está no controle.</h2>
     <p>Faça o pedido da sua box direto pelo site e receba na mesa da sua casa.</p>
     <p>Com apenas um <span className='text-xl bg-orange-400 w-10 p-1 rounded-xl font-medium'>CLIQUE</span> você terá a sua feira da semana sem precisar sair de casa.</p>
     <p>Nossos alimentos orgânicos te ajudarão a manter uma alimentação saudável.</p>
@@ -222,7 +222,7 @@ function Home() {
     
     
 <div className='gap-4 flex flex-col p-5 items-center justify-center h-full my-auto text-xl  '>
-    <h2 className='text-3xl  font-semibold uppercase text-[#FB7F01]'>Benefícios para a saúde </h2>
+    <h2 className='md:text-3xl lg:text-3xl  font-semibold uppercase text-[#FB7F01]'>Benefícios para a saúde </h2>
     <p>Menor exposição a pesticidas e produtos químicos.</p>
     <p>Maior teor nutricional.</p>
     <p>Melhor sáude do coração.</p>
@@ -239,7 +239,7 @@ function Home() {
   <div className='flex flex-col  gap-6  rounded-3xl fundoHome4 w-full px-10 '>
     
     
-<div className='gap-4 flex flex-col p-5 items-center justify-center h-full my-auto text-xl  '>
+<div className='gap-4 flex flex-col p-5 items-center justify-center h-full my-auto text-xl lg:pb-14 '>
     <h2 className='text-3xl  font-semibold uppercase text-[#FB7F01]'>Colabore com a causa</h2>
     <p>Redução da fome e insegurança alimentar.</p>
     <p>Redução da desigualdade.</p>
