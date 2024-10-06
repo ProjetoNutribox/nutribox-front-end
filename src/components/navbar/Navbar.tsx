@@ -9,6 +9,8 @@ import { PiShoppingCartThin } from 'react-icons/pi';
 
 
 function Navbar() {
+
+
   const navigate = useNavigate()
 
   const {usuario, handleLogout } = useContext(AuthContext)
@@ -23,7 +25,7 @@ function Navbar() {
 
   if(usuario.token !== ''){
     navBarComponent= (
-      <div className="color-navbar w-full text-white flex justify-center py-2 px-4 ">
+      <div className="color-navbar w-full text-white  justify-center py-2 px-4 ">
       <div className="container flex justify-between text-lg  items-center">
 
         <div className='flex gap-2 items-center '>
@@ -61,7 +63,7 @@ function Navbar() {
 
   }else {
     navBarComponent = (
-      <div className="color-navbar w-full text-white flex justify-center py-2 px-4 ">
+      <div className=" color-navbar w-full text-white flex justify-center py-2 px-4 ">
 
       <div className="container flex justify-between text-lg  items-center">
 
@@ -70,7 +72,7 @@ function Navbar() {
        <div><img src={logo} alt="" /></div>
        </div>
 
-        <div className="flex gap-5">
+        <div className="invisible md:visible flex gap-5 ">
           <Link to="/home" className="hover:underline">
             Início
           </Link>
@@ -85,7 +87,7 @@ function Navbar() {
           <span>|</span>
           
           <Link to="/login" >
-          <button className='border rounded-lg px-9 bg-white text-[#457D00] hover:bg-[#FB7F01] hover:text-white hover:underline'>Login  </button>
+          <button className='border rounded-lg px-9 bg-white text-[#457D00] hover:bg-[#FB7F01] hover:text-white hover:underline'>Login</button>
              
           </Link>
           
