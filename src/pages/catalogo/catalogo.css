@@ -52,3 +52,53 @@
       background-blend-mode: darken;
       background-color: rgba(0, 0, 0, 0.2);
 }
+
+/* Estilos padrões para a div */
+.my-div {
+ 
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Media query para telas pequenas (mobile) */
+@media (max-width: 640px) {
+  .my-div {
+   
+    width: 100%;
+    padding: 0 16px; 
+  }
+}
+
+
+.responsive-div {
+  padding: 3.5rem; 
+  max-width: 100%; /* largura padrão em telas maiores */
+}
+
+@media (max-width: 768px) {
+  .responsive-div {
+      padding: 0.5rem; 
+      max-width: 90%; 
+  }
+}
+
+.responsive-paragraph {
+  font-size: 1.5rem; /* Tamanho da fonte equivalente a text-2xl em telas maiores */
+}
+
+.responsive-heading {
+  font-size: 2rem; /* Tamanho da fonte equivalente a text-3xl em telas maiores */
+}
+
+@media (max-width: 768px) {
+  .responsive-paragraph {
+      font-size: 1rem; /* Tamanho da fonte para telas menores */
+  }
+
+  .responsive-heading {
+      font-size: 1.5rem; /* Tamanho da fonte para o heading em telas menores */
+  }
+}
+
+
+
