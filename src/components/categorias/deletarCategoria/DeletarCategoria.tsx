@@ -81,12 +81,12 @@ function DeletarCategoria() {
     <div className='container mx-auto'>
 
         <h1 className='text-4xl text-center my-4 p-10'>Deletar Categoria</h1>
-        <p className='text-center text-xl font-semibold mb-4'>Você tem certeza de que deseja apagar a Categoria a seguir?</p>
+        <p className='text-center text-xl font-semibold mb-4 px-10'>Você tem certeza de que deseja apagar a Categoria a seguir?</p>
 
     
         <div className='flex flex-col'>
-    <div className='text-center my-16  mx-auto w-96 container text-white   '>
-      <div className='bg-[#538d22] flex flex-col  mb-10 rounded-3xl  h-full relative'>
+        <div className='text-center my-16  mx-auto w-96 container text-white   '>
+        <div className='bg-[#538d22] flex flex-col  mb-10 rounded-3xl  h-full relative'>
 
 
         <div className='w-full h-60  '>
