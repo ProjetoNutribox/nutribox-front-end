@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <>
-        <div className=" w-full  flex justify-center fundoHome">
+        <div className="flex justify-center fundoHome">
           <div className='container grid grid-cols-1 md:grid-cols-2 text-white items-center  justify-center'>
 
             
@@ -32,7 +32,6 @@ function Home() {
             <Link to ='/produtos' className='rounded-2xl bg-white text-lime-800  text-xl  hover:bg-[#EEBA0B] font-bold py-4 px-8'>    <button >VEM PRA HORTA</button></Link>
               
               </div>
-         
             </div>
           </div>
         
@@ -146,7 +145,7 @@ function Home() {
     <p className='md:text-xl text-center font-normal '>Você pode escolher uma  <span className='font-semibold'>cesta pronta</span> com alimentos pré selecionados , e em breve poderá   <span className='font-semibold'>personalizar</span> sua cesta de acordo com a sua preferência.</p>
     <p className='md:text-xl text-center font-normal '> Selecionamos alimentos de acordo com a safra do mês, garantindo frescor, sabor excepcional e um menor impacto ambiental.</p>
 
-    <Link className='bg-[#EEBA0B]  py-4 px-2 w-1/3 rounded-xl text-xs md:text-sm lg:text-xl text-white hover:bg-[#679436]  hover:underline text-center' to='/catalogo'>
+    <Link className='bg-[#EEBA0B]  py-4 px-2 w-1/3 rounded-xl  md:text-sm lg:text-xl text-white hover:bg-[#679436]  hover:underline text-center' to='/catalogo'>
     <button >Faça sua feira</button>
     </Link>
     
@@ -173,7 +172,7 @@ function Home() {
 
     <p className='text-x md:text-xl text-center font-normal '>Alimentando-se  com <span className='font-semibold'>alimentos nutritivos</span> e  <span className='font-semibold'>livres de agrotóxicos</span>.</p>
  
-    <Link to='/sobreNos' className='  bg-[#FB7F01] md:mt-10 py-4 px-2 w-1/3 rounded-xl text-xs md:text-sm lg:text-xl text-white hover:bg-[#679436]   hover:underline text-center'>
+    <Link to='/sobreNos' className='  bg-[#FB7F01] md:mt-10 py-4 px-2 w-1/3 rounded-xl  md:text-sm lg:text-xl text-white hover:bg-[#679436]   hover:underline text-center'>
     <button >Saiba mais</button>
     </Link>
     </div>
@@ -184,7 +183,7 @@ function Home() {
   </div>
 
 
-<div className=' flex flex-col items-center gap-5 text-[#31572C] '>
+<div className=' flex flex-col items-center  gap-5 text-[#31572C] '>
 <h2 className='font-semibold text-lg md:text-4xl text-[#31572C]'>Por que escolher o NutriBox?</h2>
 
 <p className='text-lg text-center mx-4 lg:text-3xl text-[#FB7F01] font-medium'>Compre alimentos sem agrotóxicos e contribua com a nossa causa.</p>
@@ -196,14 +195,13 @@ function Home() {
        
        
 
-<div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 text-center my-16 gap-6 mx-auto container text-white'>
+<div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 text-center my-16 gap-6 px-10 mx-auto container text-white'>
 
   
-
-  <div className='flex flex-col   gap-6 rounded-3xl fundoHome2 w-full px-10 '>
+  <div className='flex flex-col  gap-6 rounded-3xl fundoHome2 w-full px-10 '>
     
     
-<div className='gap-4 flex flex-col p-5 items-center justify-center h-full my-auto text-xl  '>
+<div className='gap-4 flex flex-col p-5  items-center justify-center h-full my-auto text-xl  '>
     <h2 className='md:text-3xl lg:text-3xl font-semibold uppercase text-[#FB7F01]'>Você está no controle.</h2>
     <p>Faça o pedido da sua box direto pelo site e receba na mesa da sua casa.</p>
     <p>Com apenas um <span className='text-xl bg-orange-400 w-10 p-1 rounded-xl font-medium'>CLIQUE</span> você terá a sua feira da semana sem precisar sair de casa.</p>
@@ -218,7 +216,7 @@ function Home() {
   
 
   
-  <div className='flex flex-col  gap-6  rounded-3xl fundoHome3 w-full px-10 '>
+  <div className='flex flex-col  gap-6   rounded-3xl fundoHome3 w-full px-10 '>
     
     
 <div className='gap-4 flex flex-col p-5 items-center justify-center h-full my-auto text-xl  '>

@@ -86,7 +86,7 @@ function ListaCategorias() {
           </Link>
           
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mx-auto container gap-10" >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto container md:gap-10" >
 
             {filteredCategorias.map((categoria) => (
               <CardCategoria key={categoria.id} categoria={categoria} foto={'https://i.ibb.co/M6TRbrz/box-outono.jpg'} />

@@ -6,3 +6,16 @@
       background-size: cover;
       background-position: center;
   }
+
+  @media (max-width: 640px) {
+    .fundoCadastro {
+      background-image: url(../../assets/pepino-cadastro.png);
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 45vh;
+        background-size: cover;
+        background-position: center;
+    }
+    
+  }
+  

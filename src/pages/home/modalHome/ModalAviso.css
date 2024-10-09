@@ -12,7 +12,16 @@
     padding-bottom: 2rem;
     width: 35%;
   }
-   
+
+  @media (max-width: 640px) {
+    .popup-content{
+      border-radius: 1rem;
+      padding-bottom: 2rem;
+      width: 90%;
+
+    }
+  }
+ 
   .modal {
     padding: 20px;
   }

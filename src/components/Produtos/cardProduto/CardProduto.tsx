@@ -24,7 +24,7 @@ function CardProduto({produto}: CardProdutoProps) {
     
     <>
     <div className='flex flex-col'>
-    <div className='grid   text-center my-16 gap-4 mx-auto container  rounded-3xl shadow-2xl'>
+    <div className='grid   text-center my-10 gap-4 mx-auto container  rounded-3xl shadow-2xl'>
       <div className='bg-white flex flex-col   rounded-3xl  h-full relative'>
 
       <div className="flex justify-end   absolute top-0 right-0">
