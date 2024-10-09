@@ -79,7 +79,7 @@ function Catalogo() {
     <>
   <header>
 
-  <div className=' fundoHeaderCatalogo   h-[60vh] '>
+  <div className=' fundoHeaderCatalogo h-[60vh] '>
  
 
     <div className='justify-center  my-auto  items-center pt-40 '>
@@ -119,6 +119,20 @@ function Catalogo() {
     </div>
 
     <div className='bg-[#f1faee] flex flex-col   rounded-3xl shadow-neutral-500 shadow-2xl'>
+         <div><img src={MediaBox} alt="" className=' rounded-t-3xl  w-full h-80 object-cover' /></div>
+
+        <div className='gap-4 flex flex-col p-5 items-center justify-center h-full  '>
+    <h2 className='text-3xl  font-semibold bg-gradient-to-r from-orange-700 to-yellow-500 bg-clip-text text-transparent'> MÉDIA BOX</h2>
+    <p>Box tamanho médio.<br/>
+Caixa ideal para quem deseja manter uma seleção e quantidades suficientes para satisfazer a todos com sabor e variedade.</p>
+    <Link to='/produtos' className='bg-[#EB4901]    py-4 px-2 w-1/2 rounded-xl hover:bg-lime-700 hover:underline text-white font-medium text-xl'> <button > Eu quero</button></Link>
+
+    
+    </div>
+    
+    </div>
+
+    <div className='bg-[#f1faee] flex flex-col   rounded-3xl shadow-neutral-500 shadow-2xl'>
         <div><img src={BigBox} alt="" className=' rounded-t-3xl  w-full h-80 object-cover' /></div> 
 
         <div className='gap-4 flex flex-col p-5 items-center justify-center h-full  '>
@@ -132,19 +146,7 @@ Caixa mais completa para aqueles que adoram ter uma abundância de frutas e legu
     
     </div>
 
-    <div className='bg-[#f1faee] flex flex-col   rounded-3xl shadow-neutral-500 shadow-2xl'>
-         <div><img src={MediaBox} alt="" className=' rounded-t-3xl  w-full h-80 object-cover' /></div>
-
-        <div className='gap-4 flex flex-col p-5 items-center justify-center h-full  '>
-    <h2 className='text-3xl  font-semibold bg-gradient-to-r from-orange-700 to-yellow-500 bg-clip-text text-transparent'> MÉDIA BOX</h2>
-    <p>Box tamanho médio.<br/>
-Caixa ideal para quem deseja manter uma seleção e quantidades suficientes para satisfazer a todos com sabor e variedade.</p>
-    <Link to='/produtos' className='bg-[#EB4901]    py-4 px-2 w-1/2 rounded-xl hover:bg-lime-700 hover:underline text-white font-medium text-xl'> <button > Eu quero</button></Link>
-
-    
-    </div>
-    
-    </div>
+  
   </div>
 
 

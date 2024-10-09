@@ -14,7 +14,7 @@ function CardCategoria({categoria, foto}: CardCategoriaProps) {
     <>
    
     <div className='flex flex-col'>
-    <div className='text-center my-16  mx-auto max-w-96 container text-white   '>
+    <div className='text-center my-10  mx-auto max-w-96 container text-white   '>
       <div className='bg-[#538d22] flex flex-col   rounded-3xl  h-full relative'>
 
       <div className="flex justify-end   absolute top-0 right-0">

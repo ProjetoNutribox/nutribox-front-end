@@ -42,71 +42,75 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 }
 return (
   <>
-    <div className="   place-items-center font-bold  body flex flex-col">
+<div className="flex flex-col items-center  font-bold mx-auto body">
+      <div className='grid lg:grid-cols-2 gap-4'>
+        <div className='flex justify-center object-scale-down p-4 lg:p-20'>
+          <img className="w-[80%]  md:w-[60%] lg:w-[100%]" src={imageLogin} alt="Imagem de login" />
+        </div>
 
-    
-
-<div className='grid  grid-cols-2 gap-2 '>
-
-<div className=' object-scale-down px-20' >
-<img src={imageLogin} alt=""/>
-</div>
-
-      <form className="flex justify-center items-center flex-col  gap-10 form mb-36 px-16 " onSubmit={login}>
-
-      <div className='flex  gap-10'>
-
-      <Link to="/login"><h2 className="   text-5xl   font-light login-titulo hover:text-sky-800 ">Login</h2></Link>
-      <span className='text-4xl font-light login-titulo'>|</span>
-      <Link to="/cadastro"><h2 className="   text-5xl   font-light login-titulo hover:text-sky-800 ">Cadastrar</h2></Link>
-      </div>
-    
-        <div className="flex flex-col w-full ">
-          <label htmlFor="email" className='text-[#16171B] pb-4 '>Email</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Email"
-            className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
-            value={usuarioLogin.email} 
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-          />
+        <form className="flex justify-center items-center flex-col gap-10 form mb-36 p-4 lg:p-16" onSubmit={login}>
+          <div className='flex text-2xl md:text-3xl lg:text-5xl gap-10 text-center'>
+            <Link to="/login">
+              <h2 className="font-light login-titulo hover:text-sky-800">Login</h2>
+            </Link>
+            <span className='text-2xl md:text-3xl lg:text-4xl font-light login-titulo'>|</span>
+            <Link to="/cadastro">
+              <h2 className="font-light login-titulo hover:text-sky-800">Cadastrar</h2>
+            </Link>
           </div>
-            <div className="flex flex-col w-full">
-              <label htmlFor="senha" className='text-[#16171B] pb-4 '>Senha</label>
-              <input
-                type="password"
-                id="senha"
-                name="senha"
-                placeholder="Senha"
-                className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
-                value={usuarioLogin.senha} 
-                onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+
+          <div className="flex flex-col w-full">
+            <label htmlFor="email" className='text-[#16171B] pb-2'>Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email"
+              className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
+              value={usuarioLogin.email} 
+              onChange={atualizarEstado}
+            />
+          </div>
+
+          <div className="flex flex-col w-full">
+            <label htmlFor="senha" className='text-[#16171B] pb-2'>Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Senha"
+              className="border-2 border-solid border-[#16171B] rounded-2xl py-2 px-4 placeholder-[#756F6E] bg-transparent font-medium"
+              value={usuarioLogin.senha} 
+              onChange={atualizarEstado}
+            />
+          </div>
+
+          <button 
+            type='submit' 
+            className="rounded-xl bg-[#FB7F01] w-full md:w-1/4 py-4 flex justify-center font-normal text-xl text-[#FFFFFF] hover:bg-[#EB4901]"
+          >
+            {isLoading ? (
+              <RotatingLines
+                strokeColor="white"
+                strokeWidth="5"
+                animationDuration="0.75"
+                width="24"
+                visible={true}
               />
-              </div>
-            <button  type='submit' className="rounded-xl color-button   bg-[#FB7F01]  w-1/4 py-4 flex justify-center font-normal text-xl text-[#FFFFFF]">
-             {isLoading ? <RotatingLines
-              strokeColor="white"
-              strokeWidth="5"//icone de carregamento
-              animationDuration="0.75"
-              width="24"
-              visible={true}
-            /> :
-              <span >Entrar</span>}
-            </button>
-  
-            <hr className="border-slate-800 w-full" />
-  
-            <p className='text-[#16171B] font-medium'>
-              Ainda não tem uma conta?{' '}
-              <Link to="/cadastro" className=" hover:text-[#023e8a]  underline">
-                Cadastre-se
-              </Link>
-            </p>
-          </form>
-        </div>
-        </div>
+            ) : (
+              <span>Entrar</span>
+            )}
+          </button>
+          <hr className="border-slate-800 w-full" />
+          <p className='text-[#16171B] font-medium text-center'>
+            Ainda não tem uma conta?{' '}
+            <Link to="/cadastro" className="hover:text-[#023e8a] underline">
+              Cadastre-se
+            </Link>
+          </p>
+        </form>
+      </div>
+    </div>
       </>
     );
   }
